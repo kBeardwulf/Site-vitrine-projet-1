@@ -1,0 +1,377 @@
+/*  aidé de bootstrap, j'effectue aussi mes propres resets persos
+    ainsi que toute modification de style général dont j'ai besoin */
+
+@font-face {
+    font-family: "roboto";
+    src: url(/fonts/Robotovariable.woff2);
+}
+
+@font-face {
+    font-family: "robotocondregular";
+    src: url(/fonts/Roboto_Condensed-Regular.woff2);
+}
+
+@font-face {
+    font-family: "robotocondbold";
+    src: url(/fonts/Roboto_Condensed-Bold.woff2);
+}
+
+@font-face {
+    font-family: "robotocondsemibold";
+    src: url(/fonts/Roboto_Condensed-SemiBold.woff2);
+}
+
+@font-face {
+    font-family: "Impact";
+    src: url(/fonts/impact.woff2);
+}
+
+
+* {
+    color: var(--lightgreen);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*  pour me faciliter la vie et les changements futurs
+    je me suis fait mes propres variables.*/
+:root {
+    --font-para : "robotocondregular", sans-serif;
+    --font-h2h3 : "impact", sans-serif;
+    --darkgreen : #003429;
+    --leafgreen : #7A9E7E;
+    --lightgreen : #b3efb2;
+    --bluewhite : #e8f1f2;
+    --footercolor : #00251d;
+    --leafboxfontcolor : #000000;
+}
+
+/*  Ici j'ajuste les paramètres généraux souhaité
+    en consultant avec ma maquette. j'ai standardisé le rem
+    pour qu'il fasse 10px, me facilitant son utilisation
+    pour le responsive */
+html {
+    font-size: 62.5%;
+}
+
+p {
+    font-family: var(--font-para);
+    font-size: 1.2rem;
+}
+
+a {
+    font-family: var(--font-para);
+    font-size: 1.2rem;
+}
+
+h2 { 
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+/* quelques ajustements pour contrer bootstrap inclus */
+a, ul, li {
+    text-decoration: none;
+    padding-left: 0;
+}
+
+body {
+    background-color: var(--darkgreen);
+}
+
+.separator {
+    border: solid 1px var(--lightgreen);
+    width: 25%;
+    opacity: 0.5;
+    margin-bottom: 50px;
+}
+
+.separatorlarge {
+    border: solid var(--lightgreen) 1px;
+    width: 100%;
+    opacity: 0.5;
+    margin-top: 100px;
+}
+
+footer {
+    background-color: var(--footercolor);
+}
+
+/*  À partir d'ici je commence à toujours à mes IDs & Classes.
+    En commençant par la navbar. */
+
+#mobileNavbar {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: var(--leafgreen);
+    /*  Au départ, mes SVGs étaient hors de ma ligne verte.
+        align-items & justify-content les ont remise à l'intérieur de la boite*/
+    align-items: center;
+    justify-content: space-around;
+    /*  Ici je fixe la barre mobile en bas de mon écran*/
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+}
+
+#navbarre a {
+    color: var(--lightgreen);
+}
+
+#navbarre a:hover {
+    color: #e8f1f2;
+}
+
+.contactBtn {
+    background-color: var(--leafgreen);
+    height: 33px;
+    width: 90px;
+    font-weight: 600;
+    border-radius: 1rem;
+    padding: 5px
+}
+
+#navbarre .contactBtn a {
+    font-family: var(--font-para);
+    font-size: 16px;
+    color: var(--leafboxfontcolor);
+}
+
+
+#textlogo {
+    font-family: var(--font-h2h3);
+    font-size: 8rem;
+    line-height: 1;
+    position: absolute;
+    left: 10px;
+}
+
+/*  Pour créer une bordure sur ma span, j'ai utilisé du text shadow
+    Il y aurait un paramètre "webkit" mais pas compatible sur firefox. */
+#textlogo span {
+    color: var(--darkgreen);
+        text-shadow:
+        -1px  1px 0 var(--lightgreen),  /* Ombre en haut a gauche */
+        1px  1px 0 var(--lightgreen),   /* Ombre en haut a droite */
+        -1px -1px 0 var(--lightgreen),  /* Ombre en bas a gauche */
+        1px -1px 0 var(--lightgreen);   /* Ombre en bas a droite */
+ 
+}
+
+.herobanner {
+    background-image: url(/img/Luc-Bouchon_KingCon_scene_vide.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 283px;
+} 
+
+
+
+
+
+
+
+
+#redirectContact p {
+    margin-top: 55px;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: -35px;
+}
+
+.contactBttn p {
+    color: var(--leafboxfontcolor);
+    background-color: var(--leafgreen);
+    width: 170px;
+    height: 40px;
+    padding-top: 6px;
+    border-radius: 1rem;
+
+}
+
+#footer {
+    width: 430px;
+    height: 370px;
+}
+
+#footer a, #footer p {
+    color: var(--leafgreen);
+}
+
+.emailcontact img {
+    margin-right: 5px;
+    margin-bottom: 9px;
+}
+
+.footerleft p {
+    margin-top: 5px;
+}
+
+.footerleft span {
+    color: var(--leafgreen);
+    font-weight: 800;
+}
+
+.footerleft img {
+    margin-top: -30px;
+}
+
+.footerright div {
+    margin-bottom: 5px;
+}
+
+.footerright p {
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+
+
+/************************************************************/
+/*  J'ai commencé par des medias query qui cache les navbar inutile en fonction
+    de la taille de l'écran.*/
+
+@media (max-width: 430px) {
+    #navbarre {
+        display: none;
+    }
+
+}
+
+@media (min-width: 431px) {
+    #mobileNavbar {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .herobanner {
+        height: 835px;
+        width: 100%;
+    }
+
+    #textlogo {
+        font-size: 30rem;
+        top: 200px;
+    }
+
+    p {
+    font-family: var(--font-para);
+    font-size: 1.6rem;
+    }
+
+    a {
+        font-family: var(--font-para);
+        font-size: 1.6rem;
+    }
+
+    h2 { 
+        font-size: 2.4rem;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+    }
+
+    .devbox .container {
+        height: 60px;
+        width: 270px;
+        background-color: var(--leafgreen);
+        border-radius: 1rem;
+        
+    }
+
+    .greenbox {
+        height: 120px;
+        width: 100%;
+        background-color: var(--darkgreen);
+        border-radius: 1rem;
+        border: solid 1px var(--lightgreen);
+    }
+
+    #eventimg img {
+        height: 260px;
+        width: 430px;
+    }
+
+    .desktopeventimg {
+        display: flex;
+        height: 230px;
+        width: 370px;
+        border-radius: 1rem;
+
+    }
+
+    .greenbox p {
+        color: var(--lightgreen);
+        padding: 0 5px;
+    }
+
+
+    .workflowCard h3 {
+        font-family: var(--font-h2h3);
+        font-size: 3rem;
+        text-align: center;
+        width: 100%;
+        height: 50px;
+        border: solid 1px var(--lightgreen);
+        border-radius: 1rem;
+        padding: 6px 15px;
+
+    }
+
+    .workflowCard img {
+        margin-top: 25px;
+        margin-bottom: -80px;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+    }
+
+    .workflowtext {
+    width: 270px;
+    height: 330px;
+    background-color: var(--leafgreen);
+    border-radius: 1rem;
+    text-align: center;
+    margin-top: 10px;
+    }
+
+    .workflowtext p {
+        color: var(--leafboxfontcolor);
+        padding-top: 80px;
+    }
+
+    #footer {
+    width: 100%;
+    height: 200px;
+    }
+
+
+
+    .footerleft {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .footerleft .logo {
+        margin-top: 5px;
+        margin-right: 20px;
+    }
+
+    .footerleft .separator {
+        display: none;
+    }
+
+    .footerright {
+        display: flex;
+        justify-content: space-around;
+        width: 400px;
+        text-align: center;
+    }
+}
