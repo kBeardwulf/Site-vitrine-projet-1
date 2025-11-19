@@ -2,11 +2,6 @@
     ainsi que toute modification de style général dont j'ai besoin */
 
 @font-face {
-    font-family: "roboto";
-    src: url(/fonts/Robotovariable.woff2);
-}
-
-@font-face {
     font-family: "robotocondregular";
     src: url(/fonts/Roboto_Condensed-Regular.woff2);
 }
@@ -57,12 +52,13 @@ html {
 
 p {
     font-family: var(--font-para);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 a {
     font-family: var(--font-para);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    text-decoration: none;
 }
 
 h2 { 
@@ -74,7 +70,9 @@ h3 {
 }
 
 /* quelques ajustements pour contrer bootstrap inclus */
-a, ul, li {
+ul, li {
+    font-family: var(--font-para);
+    font-size: 1.2rem;
     text-decoration: none;
     padding-left: 0;
 }
@@ -84,7 +82,6 @@ body {
 }
 
 .separator {
-
     border: solid 1px var(--lightgreen);
     width: 25%;
     opacity: 0.5;
@@ -96,6 +93,24 @@ body {
     width: 100%;
     opacity: 0.5;
     margin-top: 100px;
+}
+
+.rightVerticalSeparator {
+    height: 210px;
+    width: 1px;
+    border: 2px solid;
+    margin: 15px 0;
+    margin-left: 370px;
+    opacity: 70%;
+}
+
+.leftVerticalSeparator {
+    height: 210px;
+    width: 1px;
+    border: 2px solid;
+    margin: 20px 0;
+    margin-left: 50px;
+    opacity: 70%;
 }
 
 footer {
@@ -157,40 +172,158 @@ footer {
 #textlogo span {
     color: var(--darkgreen);
         text-shadow:
-        -1px  1px 0 var(--lightgreen),  /* Ombre en haut a gauche */
-        1px  1px 0 var(--lightgreen),   /* Ombre en haut a droite */
-        -1px -1px 0 var(--lightgreen),  /* Ombre en bas a gauche */
-        1px -1px 0 var(--lightgreen);   /* Ombre en bas a droite */
+        -1px  1px 0 var(--lightgreen),  /* Ombre en haut gauche */
+        1px  1px 0 var(--lightgreen),   /* Ombre en haut droite */
+        -1px -1px 0 var(--lightgreen),  /* Ombre en bas gauche */
+        1px -1px 0 var(--lightgreen);   /* Ombre en bas droite */
  
 }
 
 .herobanner {
-    background-image: url(/img/Luc-Bouchon_KingCon_scene_vide.jpg);
+    background-image: url(/img/LucBKingCon_scene_vide.jpg);
     background-size: cover;
     background-position: center;
     height: 283px;
 } 
 
-.h3GraphDes {
+/*  Je crée mes designs de H3 pour "Graphic Design" "Web dev." et "Event org." */
+.h3GraphAndEvent {
     font-family: "impact";
     font-size: 4.8rem;
-    margin-right: 13px;
+    margin-right: 8px;
 }
 
+/*  J'ajuste le deuxieme mot pour mon design particulier */
+.h3GraphAndEvent span {
+    color: var(--darkgreen);
+    text-shadow:
+        -1px  1px 0 var(--lightgreen),  /* Ombre en haut gauche */
+        1px  1px 0 var(--lightgreen),   /* Ombre en haut droite */
+        -1px -1px 0 var(--lightgreen),  /* Ombre en bas gauche */
+        1px -1px 0 var(--lightgreen);   /* Ombre en bas droite */
+}
+
+/*  Je crée mes cartes qui vont contenir texte et images */
 .greencard {
     background-color: var(--leafgreen);
-    width: 390px;
-    height: 250px;
+    width: 400px;
+    height: 281px;
     border-radius: 1rem;
     margin-top: -10px;
 }
 
-.imgGreenCard {
-    
+/*  J'ajuste le texte parce que figma m'a trahi */
+#liGreenLeaf p {
+    font-size: 1.2rem;
+    color: var(--leafboxfontcolor);
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 0 5px;
+}
+
+/*  Ici pareil */
+#liGreenLeaf li {
+    font-size: 1.2rem;
+    color: var(--leafboxfontcolor);
+    list-style-type: disc;
+    margin-left: 40px;
+}
+
+/*  Je design mon bouton pour les pages détaillés */
+.BtnKnowMore {
+    margin-left: 70px;
+    padding-top: 5px;
+    padding-left: 8px;
+    width: 100px;
+    height: 30px;
+    background-color: var(--darkgreen);
+    border-radius: 1rem;   
+}
+
+.BtnKnowMore a {
+    color: var(--bluewhite);
+    font-size: 1.4rem;
+}
+
+/*  J'ajuste la taille et le placement de mes images dans les cards */
+.imgGreenLeafCard {
+    margin-left: -13px;
+    height: 141px;
+    margin-bottom: -1px;
+}
+/*  et j'en fais des versions "2" pour ajuster ma version inversé de "Web dev." */
+.h3WebDev {
+    font-family: "impact";
+    font-size: 4.8rem;
+    margin-left: 4px;
+    margin-top: -47px;
+}
+
+.h3WebDev span {
+    color: var(--darkgreen);
+    text-shadow:
+        -1px  1px 0 var(--lightgreen),  /* Ombre en haut gauche */
+        1px  1px 0 var(--lightgreen),   /* Ombre en haut droite */
+        -1px -1px 0 var(--lightgreen),  /* Ombre en bas gauche */
+        1px -1px 0 var(--lightgreen);   /* Ombre en bas droite */
+}
+
+/*  Version 2 des cards*/
+.greencard2 {
+    background-color: var(--darkgreen);
+    border: solid 1px var(--lightgreen);
+    width: 400px;
+    height: 281px;
+    border-radius: 1rem;
+    margin-top: -10px;
+}
+
+.imgDarkGreen {
+    margin-left: -13px;
+    height: 142px;
+    margin-top: -2px;
+}
+
+#liDarkGreen p {
+    font-size: 1.2rem;
+    margin-top: -20px;;
+}
+
+#liDarkGreen li {
+    font-size: 1.2rem;
+    list-style-type: disc;
+    margin-left: 50px;
+}
+
+.BtnKnowMore2 {
+    margin-top: 35px;
+    margin-left: 75px;
+    padding-top: 5px;
+    padding-left: 8px;
+    width: 100px;
+    height: 30px;
+    background-color: var(--leafgreen);
+    border-radius: 1rem;   
+}
+
+.BtnKnowMore2 a {
+    color: var(--leafboxfontcolor);
+    font-weight: 700;
+    font-size: 1.4rem;
 }
 
 
+/*  l'adjuster me sers à resserer les cards entre elles
+    et les lignes directrices verticales */
+.adjuster {
+     margin-bottom: -35px;
+}
 
+.adjustBtn3 {
+    margin-top: 70px;
+}
+
+/*  CSS du bouton de contact en bas */
 #redirectContact p {
     margin-top: 55px;
     font-size: 2rem;
@@ -208,6 +341,8 @@ footer {
 
 }
 
+
+/*  CSS du footer */
 #footer {
     width: 430px;
     height: 370px;
@@ -292,81 +427,20 @@ footer {
         font-size: 2.2rem;
     }
 
-    .devbox .container {
-        height: 60px;
-        width: 270px;
-        background-color: var(--leafgreen);
-        border-radius: 1rem;
-        
-    }
-
-    .greenbox {
-        height: 120px;
-        width: 100%;
-        background-color: var(--darkgreen);
-        border-radius: 1rem;
-        border: solid 1px var(--lightgreen);
-    }
-
-    #eventimg img {
-        height: 260px;
-        width: 430px;
-    }
-
-    .desktopeventimg {
-        display: flex;
-        height: 230px;
-        width: 370px;
-        border-radius: 1rem;
+    .leftVerticalSeparator, .rightVerticalSeparator {
+        margin-left: 0;
+        padding: 0;
 
     }
 
-    .greenbox p {
-        color: var(--lightgreen);
-        padding: 0 5px;
-    }
-
-
-    .workflowCard h3 {
-        font-family: var(--font-h2h3);
-        font-size: 3rem;
-        text-align: center;
-        width: 100%;
-        height: 50px;
-        border: solid 1px var(--lightgreen);
-        border-radius: 1rem;
-        padding: 6px 15px;
-
-    }
-
-    .workflowCard img {
-        margin-top: 25px;
-        margin-bottom: -80px;
-        z-index: 1;
-        width: 150px;
-        height: 150px;
-    }
-
-    .workflowtext {
-    width: 270px;
-    height: 330px;
-    background-color: var(--leafgreen);
-    border-radius: 1rem;
-    text-align: center;
-    margin-top: 10px;
-    }
-
-    .workflowtext p {
-        color: var(--leafboxfontcolor);
-        padding-top: 80px;
+    .h3WebDev{
+        margin-top: 0px;
     }
 
     #footer {
     width: 100%;
     height: 200px;
     }
-
-
 
     .footerleft {
         display: flex;

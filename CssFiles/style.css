@@ -1,10 +1,6 @@
 /*  aidé de bootstrap, j'effectue aussi mes propres resets persos
     ainsi que toute modification de style général dont j'ai besoin */
 
-@font-face {
-    font-family: "roboto";
-    src: url(/fonts/Robotovariable.woff2);
-}
 
 @font-face {
     font-family: "robotocondregular";
@@ -57,12 +53,12 @@ html {
 
 p {
     font-family: var(--font-para);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 a {
     font-family: var(--font-para);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 h2 { 
@@ -164,7 +160,7 @@ footer {
 }
 
 .herobanner {
-    background-image: url(/img/Luc-Bouchon_KingCon_scene_vide.jpg);
+    background-image: url(/img/LucBKingCon_scene_vide.jpg);
     background-size: cover;
     background-position: center;
     height: 283px;
@@ -194,7 +190,7 @@ footer {
 /*  Création d'une box verte pour mon design du texte
     des compétences Evènementielles */
 .greenbox {
-    height: 210px;
+    height: 270px;
     width: 350px;
     background-color: var(--leafgreen);
     border-radius: 1rem;
@@ -224,11 +220,13 @@ footer {
     border-radius: 1rem;
     text-align: center;
     margin-top: 10px;
+    
 }
 
 .workflowtext p {
     color: var(--leafboxfontcolor);
     padding-top: 50px;
+    font-size: 1.2rem;
 }
 
 /*  Pour une raison que j'ignore, cela ne marchait pas
@@ -279,7 +277,7 @@ footer {
 .contactBttn p {
     color: var(--leafboxfontcolor);
     background-color: var(--leafgreen);
-    width: 170px;
+    width: 190px;
     height: 40px;
     padding-top: 6px;
     border-radius: 1rem;
@@ -289,6 +287,7 @@ footer {
 #footer {
     width: 430px;
     height: 370px;
+    font-family: var(--font-para);
 }
 
 #footer a, #footer p {
