@@ -430,7 +430,26 @@ footer {
     .leftVerticalSeparator, .rightVerticalSeparator {
         margin-left: 0;
         padding: 0;
+    }
 
+    .rightVerticalSeparator {
+        margin-bottom: -34px
+    }
+
+    .h3GraphAndEvent {
+        margin-right: 204px;
+    }
+
+    .h3WebDev {
+        margin-left: 190px;
+    }
+
+    .greencard {
+        margin-right: 210px;
+    }
+
+    .greencard2 {
+        margin-left: 260px;
     }
 
     .h3WebDev{
