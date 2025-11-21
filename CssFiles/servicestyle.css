@@ -28,7 +28,6 @@
     margin: 0;
     padding: 0;
 }
-
 /*  pour me faciliter la vie et les changements futurs
     je me suis fait mes propres variables.*/
 :root {
@@ -48,6 +47,10 @@
     pour le responsive */
 html {
     font-size: 62.5%;
+}
+
+span {
+    font-weight: bold;
 }
 
 p {
@@ -100,7 +103,7 @@ body {
     width: 1px;
     border: 2px solid;
     margin: 15px 0;
-    margin-left: 370px;
+    margin-left: 50px;
     opacity: 70%;
 }
 
@@ -109,7 +112,7 @@ body {
     width: 1px;
     border: 2px solid;
     margin: 20px 0;
-    margin-left: 50px;
+    margin-right: 80px;
     opacity: 70%;
 }
 
@@ -188,9 +191,10 @@ footer {
 
 /*  Je crée mes designs de H3 pour "Graphic Design" "Web dev." et "Event org." */
 .h3GraphAndEvent {
+    text-align: end;
     font-family: "impact";
     font-size: 4.8rem;
-    margin-right: 8px;
+    margin-right: 16px;
 }
 
 /*  J'ajuste le deuxieme mot pour mon design particulier */
@@ -255,7 +259,7 @@ footer {
 .h3WebDev {
     font-family: "impact";
     font-size: 4.8rem;
-    margin-left: 4px;
+    margin-left: 0px;
     margin-top: -47px;
 }
 
@@ -276,6 +280,7 @@ footer {
     height: 281px;
     border-radius: 1rem;
     margin-top: -10px;
+    margin-left: 20px;
 }
 
 .imgDarkGreen {
@@ -320,7 +325,8 @@ footer {
 }
 
 .adjustBtn3 {
-    margin-top: 70px;
+    margin-top: 22px;
+    margin-left: 75px;
 }
 
 /*  CSS du bouton de contact en bas */
@@ -341,7 +347,33 @@ footer {
 
 }
 
+/*  Création de ma catégorie derniers projets */
+.eventcardimg {
+    width: 190px;
+    height: 140px;
+    margin-bottom: 10px;
+}
 
+.eventcard {
+    background-color: var(--leafgreen);
+    width: 190px;
+    height: 380px;
+    border-radius: 1rem;
+}
+
+#eventtitle p {
+    font-size: 1.4rem;
+}
+
+.eventcard p {
+    font-size: 1.2rem;
+    color: var(--leafboxfontcolor);
+}
+
+
+
+
+/*******************/
 /*  CSS du footer */
 #footer {
     width: 430px;
@@ -409,8 +441,8 @@ footer {
     }
 
     #textlogo {
-        font-size: 30rem;
-        top: 200px;
+        font-size: 24rem;
+        top: 250px;
     }
 
     p {
@@ -437,8 +469,17 @@ footer {
         margin-bottom: -84px
     }
 
+    .leftVerticalSeparator {
+        margin-left: 80px;
+    }
+
+    .boxperso {
+        width: 900px;
+    }
+
+
     /*  Je créer une boite qui va emballer
-    mon h3 et ma carte afin de les garder aligné */
+        mon h3 et ma carte afin de les garder aligné */
     .h3-wrapper {
     margin-left: calc(45% + 25px);
     margin-right: auto;
@@ -447,14 +488,15 @@ footer {
     .h3GraphAndEvent {
         margin-left: 72px;
         margin-right: auto;
+        text-align: start;
     }
     
     .h3GraphAndEvent, .h3WebDev {
         font-size: 9rem;
     }
 
-    /* Ici j'ai pas eu besoin. Position relative m'a aidé
-    et le h3 web dev est magique je crois. */ 
+    /*  Ici j'ai pas eu besoin. Position relative m'a aidé
+        et le h3 web dev est magique je crois. */ 
     .h3WebDev {
         margin-left: calc(50% - 630px); 
         margin-right: auto;
@@ -485,6 +527,7 @@ footer {
 
     .h3WebDev{
         margin-top: 0px;
+        margin-left: 30px;
     }
 
     .imgGreenLeafCard, .imgDarkGreen {
@@ -503,6 +546,17 @@ footer {
     #liGreenLeaf p, #liGreenLeaf li, #liDarkGreen p, #liDarkGreen li {
         font-size: 1.6rem;
     }
+
+    #liDarkGreen p {
+        margin-top: 80px;
+    }
+
+    #liDarkGreen li:last-child {
+        margin-bottom: -70px;
+    }
+
+    /**********************/
+    /* Ajustement des boutons */
 
     .BtnKnowMore a, .BtnKnowMore2 a {
         font-size: 1.8rem;
@@ -524,11 +578,34 @@ footer {
         margin-top: 155px;
     }
 
-    .adjustBtn3 {
-        margin-top: 200px;
+    /**************/
+    /* Création et ajustements des cartes derniers projets */
+
+    .eventcardimg {
+        width: 360px;
+        height: 255px;
+        margin-bottom: 10px;
     }
 
-    /* Section footer */
+    .eventcard {
+        background-color: var(--leafgreen);
+        width: 359px;
+        height: 480px;
+        border-radius: 1rem;
+    }
+
+    #eventtitle p {
+    font-size: 1.8rem;
+    }
+
+    .eventcard p {
+    font-size: 1.6rem;
+    color: var(--leafboxfontcolor);
+    }
+
+
+    /*********************/
+    /*  Section footer */
     #footer {
     width: 100%;
     height: 200px;
@@ -554,4 +631,7 @@ footer {
         width: 400px;
         text-align: center;
     }
+
 }
+
+

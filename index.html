@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CssFiles/bootstrap.css">
     <link rel="stylesheet" href="CssFiles/style.css">
-    <title>Portfolio Graphic design Beardwulf Events.</title>
+    <title>Portfolio Beardwulf Events.</title>
 </head>
 <body>
         <!--Je possède deux navbar, une pour desktop et une pour mobile.-->
@@ -31,33 +31,42 @@
         <!--Via une media query, je demande à l'une ou l'autre de ne pas s'afficher
             en fonction de la taille d'écran-->
 
-
+<!--******************************************************************************
+**********************************************************************************-->
 
 
         <!--Ici commence le site de manière générale par la banner hero-->
+
     <div class="herobanner">
     <h1 id="textlogo">BEARDWULF <span>EVENTS.</span></h1>
     </div>
     
     <section id="whoami" class="container">
         <div class="container">
-            <h2 class="text-center mt-5">Mais à qui avez-vous donc à faire ?</h2>
-            <p class="my-5 p-2">
-                Bienvenue sur Beardwulf Events. <br>
-                Depuis toujours, j’aime donner forme aux idées. que ce soit à travers une image, un événement ou une expérience numérique.
-                Mon parcours m’a mené du design graphique à l’événementiel, avant de me plonger dans le développement web.
-                Trois domaines différents, mais une même logique : créer des projets cohérents, esthétiques et vivants.
-                Aujourd’hui, j’unis ces savoir-faire pour concevoir des identités fortes, des sites qui racontent une histoire, et des événements qui marquent les esprits.
-            </p>
+            <h2 class="text-center mt-5">Graphiste et design UX / UI, développement web et événementiel</h2>
+            <div class="d-flex justify-content-center">
+                <div class="boxperso">
+                    <p class="my-5 p-2">
+                        Bienvenue sur Beardwulf Events. <br>
+                        Depuis toujours, j’aime créer et donner forme aux idées. que ce soit à travers une image, un événement ou une expérience numérique.
+                        Mon parcours m’a mené du design graphique à l’événementiel, avant de me plonger dans le développement web.
+                        Trois domaines différents, mais une même logique : créer des projets cohérents, esthétiques et vivants.
+                        Aujourd’hui, j’unis ces savoir-faire pour concevoir des identités fortes, des sites qui racontent une histoire, et des événements qui marquent les esprits.
+                    </p>
+                </div>
+            </div>
+            
+            
         </div>
     </section>
+
 
         <!--Ici c'est la section résumé de mes compétences-->
 
     <section class="container">
         <div class="creativecard row" >
             <div class="text-center">
-                <h2 class="mb-3">Compétences créatives</h2>
+                <h2 class="mb-3 mt-5">Compétences créatives</h2>
             </div>
             <div>
                 <!--Ici j'ai créer une classe pour pouvoir target le container de bootstrap de manière précise
@@ -72,14 +81,17 @@
                     </div>
                 </div>
             </div>
-            <div class="my-5">
-                <p class="p-4">
-                    Depuis mon plus jeune âge, créer a toujours été une évidence.
-                    Très vite, j’ai exploré les outils de la suite Adobe : Photoshop et Illustrator pour donner vie à mes idées visuelles, puis InDesign pour affiner mes compositions et mes mises en page.
-                    Avec le temps, ma curiosité m’a conduit vers d’autres domaines : Premiere Pro pour concevoir des vidéos d’annonce destinées à l’événementiel, puis Figma, pour imaginer et structurer des maquettes de sites web.
-                    Chaque logiciel, chaque projet, a nourri un peu plus ma vision.
-                </p>
+            <div class="d-flex justify-content-center">
+                <div class="boxperso my-5">
+                    <p class="p-4">
+                        Depuis mon plus jeune âge, créer a toujours été une évidence.
+                        Très vite, j’ai exploré les outils de la suite Adobe : Photoshop et Illustrator pour donner vie à mes idées visuelles, puis InDesign pour affiner mes compositions et mes mises en page.
+                        Avec le temps, ma curiosité m’a conduit vers d’autres domaines : Premiere Pro pour concevoir des vidéos d’annonce destinées à l’événementiel, puis Figma, pour imaginer et structurer des maquettes de sites web.
+                        Chaque logiciel, chaque projet, a nourri un peu plus ma vision.
+                    </p>
+                </div>
             </div>
+            
         </div>
         <div>
             <div>
@@ -98,16 +110,21 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <p class="my-5 p-4">
-                        Au fil de mes études, j’ai appris à maîtriser différents langages et technologies du web, me donnant la possibilité de concevoir des sites complets de mes propres mains.
-                        J’utilise Bootstrap pour gagner en efficacité sans sacrifier la qualité, tandis que le HTML, le CSS et le JavaScript me permettent de façonner des interfaces uniques, adaptées à chaque projet.
-                    </p>
+                    <div class="d-flex justify-content-center">
+                        <div class="boxperso">
+                            <p class="my-5 p-4">
+                                Au fil de mes études, j’ai appris à maîtriser différents langages et technologies du web, me donnant la possibilité de concevoir des sites complets de mes propres mains.
+                                J’utilise Bootstrap pour gagner en efficacité sans sacrifier la qualité, tandis que le HTML, le CSS et le JavaScript me permettent de façonner des interfaces uniques, adaptées à chaque projet.
+                            </p>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
-                <h2 class="text-center mb-3">Compétences Évènementielles</h2>
+                <h2 class="text-center mb-3 mt-5">Compétences Évènementielles</h2>
             </div>
             <div class="greenbox d-flex container justify-content-center align-items-center mb-3">
                 <p class="m-3">
@@ -127,9 +144,9 @@
         </div>
     </section>
 
+
     <!--On en a fini avec la partie résumé de compétences, on s'attaque maintenant
         a la partie méthode de travail-->
-
     <section id="workflow" class="container">
         <div class="row text-center justify-content-center">
             <div class="separator mt-5"></div>
@@ -137,7 +154,6 @@
         </div>
 
         <!-- J'ai séparé les 4 cartes en lots de deux pour les aligner avec flexbox-->
-
         <div class="container">
             <div class="row">
                 <div class="col-6 col-md-3 workflowCard"> <!-- Première carte -->
@@ -199,6 +215,7 @@
         </div>                   
     </section>
 
+
 <!-- Dernier bloc de contact avant le footer et la première page html sera (quasi) terminé !-->
 
     <section id="redirectContact">
@@ -212,6 +229,7 @@
 
 
 <!-- Section du footer -->
+
     <div class="separatorlarge"></div>
     <footer id="footer">
         <div class="footercontainer d-flex justify-content-around">
