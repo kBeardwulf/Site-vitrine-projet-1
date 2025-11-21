@@ -221,7 +221,6 @@ footer {
     font-size: 1.2rem;
     color: var(--leafboxfontcolor);
     margin-top: 10px;
-    margin-bottom: 15px;
     padding: 0 5px;
 }
 
@@ -370,6 +369,16 @@ footer {
     color: var(--leafboxfontcolor);
 }
 
+.partnerimg1, .partnerimg3 {
+    height: 102px;
+    width: 102px;
+}
+
+
+.partnerimg2 {
+    width: 128px;
+    height: 102px;
+}
 
 
 
@@ -535,16 +544,20 @@ footer {
         height: 222px;
     }
 
+    #liGreenLeaf p, #liGreenLeaf li, #liDarkGreen p, #liDarkGreen li {
+        font-size: 1.6rem;
+    }
+
+    #liGreenLeaf .greenLeafPara {
+        margin-top: 50px;
+    }
+
     .imgGreenLeafCard {
         margin-left: -6px;
     }
 
     .imgDarkGreen {
         margin-left: 0px;
-    }
-
-    #liGreenLeaf p, #liGreenLeaf li, #liDarkGreen p, #liDarkGreen li {
-        font-size: 1.6rem;
     }
 
     #liDarkGreen p {
@@ -567,7 +580,7 @@ footer {
         width: 130px;
         height: 35px;
         margin-left: 180px;
-        margin-top: 120px;
+        margin-top: 95px;
     }
 
 
@@ -578,7 +591,7 @@ footer {
         margin-top: 155px;
     }
 
-    /**************/
+    /****************************************************/
     /* Création et ajustements des cartes derniers projets */
 
     .eventcardimg {
@@ -602,6 +615,13 @@ footer {
     font-size: 1.6rem;
     color: var(--leafboxfontcolor);
     }
+
+    .partnerbox {
+        width: 900px;
+        display: flex;
+        justify-content: space-around;
+    }
+
 
 
     /*********************/

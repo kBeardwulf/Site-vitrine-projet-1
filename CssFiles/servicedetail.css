@@ -1,0 +1,300 @@
+/*  aidé de bootstrap, j'effectue aussi mes propres resets persos
+    ainsi que toute modification de style général dont j'ai besoin */
+
+@font-face {
+    font-family: "robotocondregular";
+    src: url(/fonts/Roboto_Condensed-Regular.woff2);
+}
+
+@font-face {
+    font-family: "robotocondbold";
+    src: url(/fonts/Roboto_Condensed-Bold.woff2);
+}
+
+@font-face {
+    font-family: "robotocondsemibold";
+    src: url(/fonts/Roboto_Condensed-SemiBold.woff2);
+}
+
+@font-face {
+    font-family: "Impact";
+    src: url(/fonts/impact.woff2);
+}
+
+
+* {
+    color: var(--lightgreen);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/*  pour me faciliter la vie et les changements futurs
+    je me suis fait mes propres variables.*/
+:root {
+    --font-para : "robotocondregular", sans-serif;
+    --font-h2h3 : "impact", sans-serif;
+    --darkgreen : #003429;
+    --leafgreen : #7A9E7E;
+    --lightgreen : #b3efb2;
+    --bluewhite : #e8f1f2;
+    --footercolor : #00251d;
+    --leafboxfontcolor : #000000;
+}
+
+/*  Ici j'ajuste les paramètres généraux souhaité
+    en consultant avec ma maquette. j'ai standardisé le rem
+    pour qu'il fasse 10px, me facilitant son utilisation
+    pour le responsive */
+html {
+    font-size: 62.5%;
+}
+
+span {
+    font-weight: bold;
+}
+
+p {
+    font-family: var(--font-para);
+    font-size: 1.4rem;
+}
+
+a {
+    font-family: var(--font-para);
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+h2 { 
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+/* quelques ajustements pour contrer bootstrap inclus */
+ul, li {
+    font-family: var(--font-para);
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding-left: 0;
+}
+
+body {
+    background-color: var(--darkgreen);
+}
+
+.separator {
+    border: solid 1px var(--lightgreen);
+    width: 25%;
+    opacity: 0.5;
+    margin-bottom: 50px;
+}
+
+.separatorlarge {
+    border: solid var(--lightgreen) 1px;
+    width: 100%;
+    opacity: 0.5;
+    margin-top: 100px;
+}
+
+.rightVerticalSeparator {
+    height: 210px;
+    width: 1px;
+    border: 2px solid;
+    margin: 15px 0;
+    margin-left: 50px;
+    opacity: 70%;
+}
+
+.leftVerticalSeparator {
+    height: 210px;
+    width: 1px;
+    border: 2px solid;
+    margin: 20px 0;
+    margin-right: 80px;
+    opacity: 70%;
+}
+
+footer {
+    background-color: var(--footercolor);
+}
+
+/*  À partir d'ici je commence à toujours à mes IDs & Classes.
+    En commençant par la navbar. */
+
+#mobileNavbar {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: var(--leafgreen);
+    /*  Au départ, mes SVGs étaient hors de ma ligne verte.
+        align-items & justify-content les ont remise à l'intérieur de la boite*/
+    align-items: center;
+    justify-content: space-around;
+    /*  Ici je fixe la barre mobile en bas de mon écran*/
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+}
+
+#navbarre a {
+    color: var(--lightgreen);
+}
+
+#navbarre a:hover {
+    color: #e8f1f2;
+}
+
+.contactBtn {
+    background-color: var(--leafgreen);
+    height: 33px;
+    width: 90px;
+    font-weight: 600;
+    border-radius: 1rem;
+    padding: 5px
+}
+
+#navbarre .contactBtn a {
+    font-family: var(--font-para);
+    font-size: 16px;
+    color: var(--leafboxfontcolor);
+}
+
+
+#textlogo {
+    font-family: var(--font-h2h3);
+    font-size: 7rem;
+    line-height: 1;
+    position: absolute;
+    left: 10px;
+}
+
+/*  Pour créer une bordure sur ma span, j'ai utilisé du text shadow
+    Il y aurait un paramètre "webkit" mais pas compatible sur firefox. */
+#textlogo span {
+    color: var(--darkgreen);
+        text-shadow:
+        -1px  1px 0 var(--lightgreen),  /* Ombre en haut gauche */
+        1px  1px 0 var(--lightgreen),   /* Ombre en haut droite */
+        -1px -1px 0 var(--lightgreen),  /* Ombre en bas gauche */
+        1px -1px 0 var(--lightgreen);   /* Ombre en bas droite */
+ 
+}
+
+.herobanner {
+    background-image: url(/img/LucBKingCon_scene_vide.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 283px;
+} 
+
+
+
+
+
+
+
+
+
+
+/************************************************************/
+/*  J'ai commencé par des medias query qui cache les navbar inutile en fonction
+    de la taille de l'écran.*/
+
+@media (max-width: 430px) {
+    #navbarre {
+        display: none;
+    }
+
+    .eventcard3 {
+        display: none;
+    }
+
+}
+
+@media (min-width: 431px) {
+    #mobileNavbar {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .herobanner {
+        height: 835px;
+        width: 100%;
+    }
+
+    #textlogo {
+        font-size: 24rem;
+        top: 250px;
+    }
+
+    p {
+    font-family: var(--font-para);
+    font-size: 1.6rem;
+    }
+
+    a {
+        font-family: var(--font-para);
+        font-size: 1.6rem;
+    }
+
+    h2 { 
+        font-size: 2.4rem;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+    }
+
+    .leftVerticalSeparator, .rightVerticalSeparator {
+        margin-left: 0;
+        padding: 0;
+        margin-bottom: -84px
+    }
+
+    .leftVerticalSeparator {
+        margin-left: 80px;
+    }
+
+    .boxperso {
+        width: 900px;
+    }
+
+
+
+
+
+
+
+
+    /*********************/
+    /*  Section footer */
+    #footer {
+    width: 100%;
+    height: 200px;
+    }
+
+    .footerleft {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .footerleft .logo {
+        margin-top: 5px;
+        margin-right: 20px;
+    }
+
+    .footerleft .separator {
+        display: none;
+    }
+
+    .footerright {
+        display: flex;
+        justify-content: space-around;
+        width: 400px;
+        text-align: center;
+    }
+
+}
