@@ -47,35 +47,18 @@
     en consultant avec ma maquette. j'ai standardisé le rem
     pour qu'il fasse 10px, me facilitant son utilisation
     pour le responsive */
-html {
-    font-size: 62.5%;
-}
+html { font-size: 62.5%; }
+span { font-weight: bold; }
 
-span {
-    font-weight: bold;
-}
+p { font-family: var(--font-para);
+    font-size: 1.4rem; }
 
-p {
-    font-family: var(--font-para);
-    font-size: 1.4rem;
-}
+a { font-family: var(--font-para);
+    font-size: 1.4rem; }
 
-a {
-    font-family: var(--font-para);
-    font-size: 1.4rem;
-}
-
-h1 {
-    font-size: 3.4rem;
-}
-
-h2 { 
-    font-size: 2.4rem;
-}
-
-h3 {
-    font-size: 1.8rem;
-}
+h1 { font-size: 3.4rem; }
+h2 { font-size: 2.4rem; }
+h3 { font-size: 1.8rem; }
 
 /* quelques ajustements pour contrer bootstrap inclus */
 a, ul, li {
@@ -270,10 +253,6 @@ footer {
     width: 115px;
     height: 115px;
 }
-/*  Je ne sais pas pourquoi mais extraction d'image sur figma
-    ne m'a pas rendu des images transparente, du coup
-    je suis obligé de galérer à changer la couleur du fond
-    ou a mettre des radius */
 
 #redirectContact p {
     margin-top: 55px;
@@ -359,29 +338,18 @@ footer {
         top: 190px;
     }
 
-    p {
-    font-family: var(--font-para);
-    font-size: 1.6rem;
-    }
+    p { font-family: var(--font-para);
+        font-size: 1.6rem; }
 
-    a {
-        font-family: var(--font-para);
-        font-size: 1.6rem;
-    }
+    a { font-family: var(--font-para);
+        font-size: 1.6rem; }
 
-    h2 { 
-        font-size: 2.4rem;
-    }
-
-    h3 {
-        font-size: 2.2rem;
-    }
+    h2 { font-size: 2.4rem; }
+    h3 { font-size: 2.2rem; }
 
     .boxperso {
         width: 900px;
     }
-
-
 
     .devbox .container {
         height: 60px;
@@ -439,12 +407,12 @@ footer {
     }
 
     .workflowtext {
-    width: 270px;
-    height: 350px;
-    background-color: var(--leafgreen);
-    border-radius: 1rem;
-    text-align: center;
-    margin-top: 10px;
+        width: 270px;
+        height: 350px;
+        background-color: var(--leafgreen);
+        border-radius: 1rem;
+        text-align: center;
+        margin-top: 10px;
     }
 
     .workflowtext p {
@@ -453,11 +421,14 @@ footer {
         font-size: 1.6rem;
     }
 
+    #redirectContact .catchphrase {
+        font-size: 3rem;
+    }
 
     /*  Section footer */
     #footer {
-    width: 100%;
-    height: 200px;
+        width: 100%;
+        height: 200px;
     }
 
     .footerleft {

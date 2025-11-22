@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CssFiles/bootstrap.css">
     <link rel="stylesheet" href="/CssFiles/servicestyle.css">
-    <title>Portfolio Graphic design Beardwulf Events.</title>
+    <title>Services - Beardwulf Events.</title>
 </head>
 <body>
         <!--Je possède deux navbar, une pour desktop et une pour mobile.-->
     <nav id="mobileNavbar">
-        <a href="#"><img src="/img/accueil.svg" alt="icone d'accueil" height="20" width="30"></a>
-        <a href="#"><img src="/img/compétences.svg" alt="icone services et compétences" height="20" width="20"></a>
-        <a href="#"><img src="/img/galerie.svg" alt="icone de la galerie" height="20" width="30"></a>
-        <a href="#"><img src="/img/Contact.svg" alt="icone de contact" height="20" width="30"></a>  
+        <a href="index.html"><img src="/img/accueil.svg" alt="icone d'accueil" height="20" width="30"></a>
+        <a href="service.html"><img src="/img/compétences.svg" alt="icone services et compétences" height="20" width="20"></a>
+        <a href="galerie.html"><img src="/img/galerie.svg" alt="icone de la galerie" height="20" width="30"></a>
+        <a href="contact.html"><img src="/img/Contact.svg" alt="icone de contact" height="20" width="30"></a>  
     </nav>
 
     <nav id="navbarre" class="navbar">
         <div class="container text-center">
-            <a class=" navbar-brand" href="#"><img src="/img/logolouptexte.svg" alt="Logo Beardwulf Events comportant le texte et une tête de loup"></a>
-            <a class="col-2" href="#">Accueil</a>
-            <a class="col-2" href="#">Services & compétences</a>
-            <a class="col-2" href="#">Galerie</a>
+            <a class=" navbar-brand" href="index.html"><img src="/img/logolouptexte.svg" alt="Logo Beardwulf Events comportant le texte et une tête de loup"></a>
+            <a class="col-2" href="index.html">Accueil</a>
+            <a class="col-2" href="service.html">Services & compétences</a>
+            <a class="col-2" href="galerie.html">Galerie</a>
             <div class="contactBtn">
-                <a class="col-2" href="#">Contact</a>
+                <a class="col-2" href="contact.html">Contact</a>
             </div>
 
         </div>
@@ -38,10 +38,10 @@
     <!--Ici commence le site de manière générale par la banner hero-->
 
     <div class="herobanner">
-    <p id="textlogo">COMPETENCES <span>SERVICES</span></p>
+    <h1 id="textlogo">COMPETENCES <span>SERVICES.</span></h1>
     </div>
         <div class="container">
-            <h2 class="mt-5 mb-5">Les trois axes de mes compétences</h2>
+            <h2 class="mt-5 mb-5 text-center">Les trois axes de mes compétences</h2>
         </div>
     <div class="d-flex justify-content-center">
         <div class="mt-4 ms-4 boxperso">
@@ -97,7 +97,6 @@
     
 
 <!-- Deuxieme carte -->
-
     <div class="container-md">
         <div class="d-flex justify-content-center">
             <div class="rightVerticalSeparator "></div>
@@ -138,7 +137,6 @@
 
 
 <!-- Troisieme carte -->
-
     <div class="container-md">
         <div class="d-flex justify-content-center">
             <div class="adjuster leftVerticalSeparator"></div>
@@ -169,16 +167,16 @@
     </div>
 
 
-    <!-- Dernier bloc de contact avant le footer et la première page html sera (quasi) terminé !-->
+    <!-- Bloc de contact -->
 
-    <section id="redirectContact">
+    <div id="redirectContact">
         <div class="text-center p-3">
-            <p>Vous pensez que l’un de ces domaines peut répondre à votre projet ? Discutons-en et voyons ce que je peux créer pour vous.</p>
+            <p class="catchphrase">Vous pensez que l’un de ces domaines peut répondre à votre projet ? Discutons-en et voyons ce que je peux créer pour vous.</p>
         </div>
         <div class="text-center contactBttn d-flex justify-content-center">
             <p class="mb-5">CONTACTEZ-MOI</p>
         </div>
-    </section>
+    </div>
 
 
 <!-- Je crée mes trois cartes relatant mes derniers events -->
@@ -251,20 +249,24 @@
         </div>
     </section>
 
+    <div class="topseparator container"></div>
 <!-- Section avec mes partenaires réguliers-->
     <section>
         <div>
             <div class="text-center mt-5 mb-5">
                 <h2>Ils me font confiance</h2>
             </div>
-            <div class="d-flex w-100 justify-content-center">
-                <div class="partnerbox">
-
+            <div class="partnerbox d-flex justify-content-center gap-5">
+                <div>
                     <img class="partnerimg1" src="/img/logo_checkpoint.jpg" alt="Logo bar checkpoint">
+                </div>
+                <div>
                     <img class="partnerimg2" src="/img/logo_koscontrol.png" alt="Logo association K.O's Control">
+                </div>
+                <div>
                     <img class="partnerimg3" src="/img/logo_sinj.png" alt="Logo SINJ Crew, organisateurs événementiels">
                 </div>
-            </div>      
+            </div>     
         </div>
 
     </section>

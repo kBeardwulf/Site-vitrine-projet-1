@@ -45,32 +45,19 @@
     en consultant avec ma maquette. j'ai standardisé le rem
     pour qu'il fasse 10px, me facilitant son utilisation
     pour le responsive */
-html {
-    font-size: 62.5%;
-}
+html { font-size: 62.5%; }
+span { font-weight: bold; }
 
-span {
-    font-weight: bold;
-}
+p { font-family: var(--font-para);
+    font-size: 1.4rem; }
+    
+a { font-family: var(--font-para);
+    font-size: 1.4rem; }
 
-p {
-    font-family: var(--font-para);
-    font-size: 1.4rem;
-}
+h1 { font-size: 3.4rem; }
+h2 { font-size: 2.4rem; }
+h3 { font-size: 1.8rem; }
 
-a {
-    font-family: var(--font-para);
-    font-size: 1.4rem;
-    text-decoration: none;
-}
-
-h2 { 
-    font-size: 2rem;
-}
-
-h3 {
-    font-size: 1.8rem;
-}
 
 /* quelques ajustements pour contrer bootstrap inclus */
 ul, li {
@@ -96,6 +83,14 @@ body {
     width: 100%;
     opacity: 0.5;
     margin-top: 100px;
+}
+
+.topseparator {
+    border: solid 1px var(--lightgreen);
+    width: 15%;
+    opacity: 0.5;
+    margin-bottom: 80px;
+    margin-top: 85px;
 }
 
 .rightVerticalSeparator {
@@ -454,23 +449,14 @@ footer {
         top: 250px;
     }
 
-    p {
-    font-family: var(--font-para);
-    font-size: 1.6rem;
-    }
+    p { font-family: var(--font-para);
+        font-size: 1.6rem; }
 
-    a {
-        font-family: var(--font-para);
-        font-size: 1.6rem;
-    }
+    a { font-family: var(--font-para);
+        font-size: 1.6rem; }
 
-    h2 { 
-        font-size: 2.4rem;
-    }
-
-    h3 {
-        font-size: 2.2rem;
-    }
+    h2 { font-size: 2.4rem; }
+    h3 { font-size: 2.2rem; }
 
     .leftVerticalSeparator, .rightVerticalSeparator {
         margin-left: 0;
@@ -617,11 +603,18 @@ footer {
     }
 
     .partnerbox {
-        width: 900px;
         display: flex;
-        justify-content: space-around;
     }
 
+    .partnerimg1, .partnerimg2, .partnerimg3 {
+        height: 250px;
+        width: auto;
+        border-radius: 1rem;
+    }
+
+    #redirectContact .catchphrase {
+        font-size: 3rem;
+    }
 
 
     /*********************/
