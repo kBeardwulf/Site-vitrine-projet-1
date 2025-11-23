@@ -1,7 +1,6 @@
 /*  aidé de bootstrap, j'effectue aussi mes propres resets persos
     ainsi que toute modification de style général dont j'ai besoin */
 
-
 @font-face {
     font-family: "robotocondregular";
     src: url(/fonts/Roboto_Condensed-Regular.woff2);
@@ -52,17 +51,25 @@ span { font-weight: bold; }
 
 p { font-family: var(--font-para);
     font-size: 1.4rem; }
-
+    
 a { font-family: var(--font-para);
     font-size: 1.4rem;
-    transition: color 0.3s ease, opacity 0.3s ease; }
+    text-decoration: none;
+    transition: color 0.3s ease, opacity 0.3s ease;}
 
 h1 { font-size: 3.4rem; }
 h2 { font-size: 2.4rem; }
 h3 { font-size: 1.8rem; }
 
-/* quelques ajustements pour contrer bootstrap */
-a, ul, li {
+h2 {
+    font-family: var(--font-para);
+    font-weight: 800;
+}
+
+/* quelques ajustements pour contrer bootstrap inclus */
+ul, li {
+    font-family: var(--font-para);
+    font-size: 1.2rem;
     text-decoration: none;
     padding-left: 0;
 }
@@ -71,11 +78,27 @@ body {
     background-color: var(--darkgreen);
 }
 
-.separator {
+.separatorfooter {
     border: solid 1px var(--lightgreen);
     width: 25%;
     opacity: 0.5;
     margin-bottom: 50px;
+}
+
+.separator {
+    border: solid 1px var(--lightgreen);
+    width: 15%;
+    opacity: 0.5;
+    margin-bottom: 70px;
+    margin-top: 90px;
+}
+
+.topseparator {
+    border: solid 1px var(--lightgreen);
+    width: 15%;
+    opacity: 0.5;
+    margin-bottom: 50px;
+    margin-top: 25px;
 }
 
 .separatorlarge {
@@ -114,7 +137,7 @@ footer {
 #navbarre a:hover {
     color: #e8f1f2;
 }
- /* Bouton de le navbar */
+
 .contactBtn {
     background-color: var(--leafgreen);
     height: 33px;
@@ -124,32 +147,16 @@ footer {
     padding: 5px
 }
 
-
 #navbarre .contactBtn a {
     font-family: var(--font-para);
     font-size: 16px;
     color: var(--leafboxfontcolor);
 }
 
-/* Bouton de bas de page */
-.contactBttn {
-    background-color: var(--leafgreen);
-    height: 38px;
-    width: 160px;
-    font-weight: 600;
-    border-radius: 1rem;
-    padding: 5px
-}
 
-.contactBttn a {
-    font-size: 2rem;
-    color: var(--leafboxfontcolor);
-}
-
-/*  A retirer bientôt */
 #textlogo {
     font-family: var(--font-h2h3);
-    font-size: 8rem;
+    font-size: 7rem;
     line-height: 1;
     position: absolute;
     left: 10px;
@@ -159,11 +166,11 @@ footer {
     Il y aurait un paramètre "webkit" mais pas compatible sur firefox. */
 #textlogo span {
     color: var(--darkgreen);
-        text-shadow:
-        -1px  1px 0 var(--lightgreen),  /* Ombre en haut a gauche */
-        1px  1px 0 var(--lightgreen),   /* Ombre en haut a droite */
-        -1px -1px 0 var(--lightgreen),  /* Ombre en bas a gauche */
-        1px -1px 0 var(--lightgreen);   /* Ombre en bas a droite */
+    text-shadow:
+        -1px  1px 0 var(--lightgreen),  /* Ombre en haut gauche */
+        1px  1px 0 var(--lightgreen),   /* Ombre en haut droite */
+        -1px -1px 0 var(--lightgreen),  /* Ombre en bas gauche */
+        1px -1px 0 var(--lightgreen);   /* Ombre en bas droite */
  
 }
 
@@ -172,111 +179,65 @@ footer {
     background-size: cover;
     background-position: center;
     height: 283px;
-} 
-
-
-/*  Comme expliqué en html, c'est pour personnaliser
-    le conteneur de mes images.
-    Pour le border radius, j'utilisais 10px, puis j'ai réalisé
-    que je pouvais le rendre responsive en utilisant le rem */
-.creativebox .container {
-    height: 60px;
-    width: 310px;
-    background-color: var(--leafgreen);
-    border-radius: 1rem;
 }
 
-/*  Même traitement pour les logos en catégorie devweb */
-.devbox .container {
-    height: 60px;
-    width: 270px;
-    background-color: var(--darkgreen);
-    border-radius: 1rem;
-    border: solid var(--leafgreen) 1px;
-}
-
-/*  Création d'une box verte pour mon design du texte
-    des compétences Evènementielles */
-.greenbox {
-    height: 270px;
-    width: 350px;
-    background-color: var(--leafgreen);
-    border-radius: 1rem;
-}
-
-.mobileeventimg {
-    height: 220px;
-    width: 365px;
-}
-
-.desktopeventimg {
-    display: none;
-}
-
-.greenbox p {
-    color: var(--leafboxfontcolor);
-}
-
-/*  Boites de "méthodes de travail" */
-.workflowtext {
-    width: 180px;
-    height: 295px;
-    background-color: var(--leafgreen);
-    border-radius: 1rem;
-    text-align: center;
-    margin-top: 10px;
-    
-}
-
-.workflowtext p {
-    color: var(--leafboxfontcolor);
-    padding-top: 50px;
-    font-size: 1.2rem;
-}
-
-.workflowCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.workflowCard h3 {
-    font-family: var(--font-h2h3);
-    font-size: 2rem;
-    text-align: center;
-    width: 100%;
-    height: 38px;
-    border: solid 1px var(--lightgreen);
-    border-radius: 1rem;
-    padding: 6px 15px;
-
-}
-
-.workflowCard img {
-    margin-top: 25px;
-    margin-bottom: -60px;
-    z-index: 1;
-    width: 115px;
-    height: 115px;
-}
-
-
-/* Phrase du bouton contact du bas */
-#redirectContact p {
-    margin-top: 55px;
-    font-size: 2rem;
+/*  Un h2 ne me semblait pas forcément utile, alors
+    j'ai créer un classe pour un paragraphe plus important*/
+.importantp p {
+    font-size: 1.8rem;
     font-weight: bold;
-    margin-bottom: 35px;
+}
+
+/* J'ajuste les couleurs et les formes de mon formulaire 
+    ainsi que les tailles des champs et de typographies*/
+#whySelect, #whySelect option {
+    color: var(--leafboxfontcolor);
+}
+
+label, input, select, #usrMsg, #whySelect {
+    font-family: var(--font-para);
+}
+
+label {
+    color: var(--bluewhite);
+    font-weight: 800;
+}
+
+::placeholder, label, #whySelect {
+    font-size: 1.4rem;
+    padding-left: 8px;
+}
+
+input, select {
+    background-color: var(--bluewhite);
+    color: var(--leafboxfontcolor);
+    height: 35px;
+    border-radius: 1rem;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#usrMsg {
+    background-color: var(--bluewhite);
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    height: 285px;
+    width: 100%;
+    resize: none;
 }
 
 
-/**********************************/
-/*Section footer*/
+/* Ici je joue avec google map.*/
+.gmap iframe {
+    border-radius: 1rem;
+}
+
+
+/*******************/
+/*  CSS du footer */
 #footer {
     width: 430px;
     height: 370px;
-    font-family: var(--font-para);
 }
 
 #footer a, #footer p {
@@ -318,6 +279,10 @@ footer {
     #navbarre {
         display: none;
     }
+    
+    .desktopShowOnly {
+        display: none;
+    }
 
 }
 
@@ -327,123 +292,73 @@ footer {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     .herobanner {
         height: 835px;
         width: 100%;
     }
 
     #textlogo {
-        font-size: 30rem;
-        top: 190px;
+        font-size: 24rem;
+        top: 250px;
     }
 
     p { font-family: var(--font-para);
         font-size: 1.6rem; }
 
     a { font-family: var(--font-para);
-        font-size: 1.6rem;
-        text-decoration: none; }
+        font-size: 1.6rem; }
 
     h2 { font-size: 2.4rem; }
     h3 { font-size: 2.2rem; }
 
-    .boxperso {
-        width: 900px;
-    }
 
-    .devbox .container {
-        height: 60px;
-        width: 270px;
-        background-color: var(--leafgreen);
-        border-radius: 1rem;
-        
-    }
-
-    .greenbox {
-        height: 120px;
-        width: 100%;
-        background-color: var(--darkgreen);
-        border-radius: 1rem;
-        border: solid 1px var(--lightgreen);
-    }
-
-    /* La text box des compétences événementielles */
-        .greenbox p {
-            color: var(--lightgreen);
-            padding: 0 5px;
-        }
-
-    #eventimg img {
-        height: 260px;
-        width: 430px;
-    }
-
-    /* les trois photos evenementielles*/
-    .desktopeventimg {
+    /* J'ai ma flexbox ici pour la version desktop*/
+    .desktopflex {
         display: flex;
-        height: 230px;
-        width: 370px;
-        border-radius: 1rem;
-
-    }
-
-    /* Il s'agit des boites vertes dans "Méthodes de travail"*/
-    .workflowCard h3 {
-        font-family: var(--font-h2h3);
-        font-size: 3rem;
-        text-align: center;
+        justify-content: center;
         width: 100%;
-        height: 50px;
-        border: solid 1px var(--lightgreen);
-        border-radius: 1rem;
-        padding: 6px 15px;
-
     }
 
-    .workflowCard img {
-        margin-top: 25px;
-        margin-bottom: -80px;
-        z-index: 1;
-        width: 150px;
-        height: 150px;
+    /* Ici c'est pour contenir le texte dans un espace
+    plus serré, pour l'esthétique. */
+    .boxperso {
+        width: 1100px;
     }
 
-    .workflowtext {
-        width: 270px;
-        height: 350px;
-        background-color: var(--leafgreen);
-        border-radius: 1rem;
-        text-align: center;
-        margin-top: 10px;
+    /* Je cache mon séparateur non nécéssaire en desktop */
+    .hideseparator {
+        display: none;
     }
 
-    .workflowtext p {
-        color: var(--leafboxfontcolor);
-        padding-top: 80px;
-        font-size: 1.6rem;
+    /* Et j'ajuste encore un peu mon formulaire et google map.*/
+    #usrMsg {
+        height: 285px;
     }
 
-    /* Phrase du bouton contact bas de page*/
-    #redirectContact .catchphrase {
-        font-size: 3rem;
+    .widthAdjuster {
+        width: 550px;
     }
 
-    /* Bouton de bas de page */
-    .contactBttn {
-        background-color: var(--leafgreen);
-        height: 60px;
-        width: 280px;
+    .widthAdjuster iframe {
+        width: 550px;
+        height: 570px;
     }
 
-    .contactBttn a {
-        font-size: 3.5rem;
+    .gmap {
+        margin-top: -10px;
     }
 
+    .gmap iframe {
+        width: 550px;
+        height: 600px;
+    }
+
+    /*********************/
     /*  Section footer */
     #footer {
-        width: 100%;
-        height: 200px;
+    width: 100%;
+    height: auto;
     }
 
     .footerleft {
@@ -466,4 +381,5 @@ footer {
         width: 400px;
         text-align: center;
     }
+
 }

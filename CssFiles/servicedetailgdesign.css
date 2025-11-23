@@ -53,7 +53,9 @@ p { font-family: var(--font-para);
     font-size: 1.4rem; }
     
 a { font-family: var(--font-para);
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: color 0.3s ease, opacity 0.3s ease; }
 
 h1 { font-size: 3.4rem; }
 h2 { font-size: 2.4rem; }
@@ -70,6 +72,13 @@ ul, li {
 
 body {
     background-color: var(--darkgreen);
+}
+
+.separatorfooter {
+    border: solid 1px var(--lightgreen);
+    width: 25%;
+    opacity: 0.5;
+    margin-bottom: 50px;
 }
 
 .separator {
@@ -125,6 +134,8 @@ footer {
     color: #e8f1f2;
 }
 
+
+/* Bouton contact navbar */
 .contactBtn {
     background-color: var(--leafgreen);
     height: 33px;
@@ -137,6 +148,21 @@ footer {
 #navbarre .contactBtn a {
     font-family: var(--font-para);
     font-size: 16px;
+    color: var(--leafboxfontcolor);
+}
+
+/* Bouton de bas de page */
+.contactBttn {
+    background-color: var(--leafgreen);
+    height: 38px;
+    width: 160px;
+    font-weight: 600;
+    border-radius: 1rem;
+    padding: 5px
+}
+
+.contactBttn a {
+    font-size: 2rem;
     color: var(--leafboxfontcolor);
 }
 
@@ -168,6 +194,7 @@ footer {
     height: 283px;
 }
 
+/* Gestion des boites vertes*/
 .greenbox {
     background-color: var(--leafgreen);
     border-radius: 1rem;
@@ -190,9 +217,14 @@ footer {
     color: var(--lightgreen);
 }
 
+/* Gestion de tailles des images*/
 .imgsize img {
-    width: 115px;
+    width: 127px;
     height: auto;
+    border: 1px solid var(--lightgreen);
+    border-radius: 1rem;
+    background-color: var(--footercolor);
+    padding: 5px;
 }
 
 .imgsize2 img {
@@ -231,7 +263,7 @@ footer {
     margin-top: 55px;
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: -35px;
+    margin-bottom: 35px;
 }
 
 
@@ -292,6 +324,7 @@ footer {
         display: none;
     }
 
+    /* On cache des images pour la version mobile */
     .eventcard3 {
         display: none;
     }
@@ -324,30 +357,34 @@ footer {
     h2 { font-size: 2.4rem; }
     h3 { font-size: 2.2rem; }
 
-    .leftVerticalSeparator, .rightVerticalSeparator {
-        margin-left: 0;
-        padding: 0;
-        margin-bottom: -84px
-    }
-
-    .leftVerticalSeparator {
-        margin-left: 80px;
-    }
-
     .boxperso {
         max-width: 1100px;
     }
 
+    /* Bouton de bas de page */
+    .contactBttn {
+        background-color: var(--leafgreen);
+        height: 60px;
+        width: 280px;
+    }
+
+    .contactBttn a {
+        font-size: 3.5rem;
+    }
+
+    /* Gestion des boites vertes*/
     .greenbox, .greenbox2 {
         max-width: 1100px;
     }
 
+    /* Gestion des titres au dessus des boites*/
     .h2desktopadjust {
         max-width: 1220px;
     }
 
+    /* Gestion des images */
     .imgsize img {
-        width: 345px;
+        width: 357px;
         height: auto;
         border: 1px solid var(--lightgreen);
         border-radius: 1rem;
@@ -385,6 +422,7 @@ footer {
         border-radius: 1rem;
     }
 
+    /* Catchphrase du bouton contact */
     #redirectContact .catchphrase {
         font-size: 3rem;
     }

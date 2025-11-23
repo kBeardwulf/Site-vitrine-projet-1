@@ -52,11 +52,14 @@ p { font-family: var(--font-para);
     font-size: 1.4rem; }
     
 a { font-family: var(--font-para);
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    transition: color 0.3s ease, opacity 0.3s ease; }
 
 h1 { font-size: 3.4rem; }
-h2 { font-size: 2.4rem; }
+h2 { font-size: 2.4rem;
+    font-family: var(--font-para); }
 h3 { font-size: 1.8rem; }
+
 
 
 /* quelques ajustements pour contrer bootstrap inclus */
@@ -141,6 +144,7 @@ footer {
     color: #e8f1f2;
 }
 
+/* Bouton contact en navbar*/
 .contactBtn {
     background-color: var(--leafgreen);
     height: 33px;
@@ -156,6 +160,25 @@ footer {
     color: var(--leafboxfontcolor);
 }
 
+/* Bouton de bas de page */
+.contactBttn {
+    background-color: var(--leafgreen);
+    height: 38px;
+    width: 160px;
+    font-weight: 600;
+    border-radius: 1rem;
+    padding: 5px
+}
+
+.contactBttn a {
+    font-size: 2rem;
+    color: var(--leafboxfontcolor);
+    text-decoration: none;
+}
+
+.topadjust {
+    margin-top: 70px;
+}
 
 #textlogo {
     font-family: var(--font-h2h3);
@@ -328,17 +351,7 @@ footer {
     margin-top: 55px;
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: -35px;
-}
-
-.contactBttn p {
-    color: var(--leafboxfontcolor);
-    background-color: var(--leafgreen);
-    width: 170px;
-    height: 40px;
-    padding-top: 6px;
-    border-radius: 1rem;
-
+    margin-bottom: 25px;
 }
 
 /*  Création de ma catégorie derniers projets */
@@ -453,9 +466,10 @@ footer {
         font-size: 1.6rem; }
 
     a { font-family: var(--font-para);
-        font-size: 1.6rem; }
+        font-size: 1.6rem;
+        text-decoration: none; }
 
-    h2 { font-size: 2.4rem; }
+    h2 { font-size: 3.4rem; }
     h3 { font-size: 2.2rem; }
 
     .leftVerticalSeparator, .rightVerticalSeparator {
@@ -466,6 +480,17 @@ footer {
 
     .leftVerticalSeparator {
         margin-left: 80px;
+    }
+
+    /* Bouton de bas de page */
+    .contactBttn {
+        background-color: var(--leafgreen);
+        height: 60px;
+        width: 280px;
+    }
+
+    .contactBttn a {
+        font-size: 3.5rem;
     }
 
     .boxperso {
@@ -569,7 +594,6 @@ footer {
         margin-top: 95px;
     }
 
-
     .BtnKnowMore2 {
         width: 130px;
         height: 35px;
@@ -578,7 +602,7 @@ footer {
     }
 
     /****************************************************/
-    /* Création et ajustements des cartes derniers projets */
+    /* Création et ajustements des cartes derniers events */
 
     .eventcardimg {
         width: 360px;
@@ -589,7 +613,7 @@ footer {
     .eventcard {
         background-color: var(--leafgreen);
         width: 359px;
-        height: 480px;
+        height: 500px;
         border-radius: 1rem;
     }
 
@@ -602,6 +626,7 @@ footer {
     color: var(--leafboxfontcolor);
     }
 
+    /* gestion des logos "ils me font confiance*/
     .partnerbox {
         display: flex;
     }
@@ -612,8 +637,10 @@ footer {
         border-radius: 1rem;
     }
 
+    /* Phrase du bouton contact du bas */
     #redirectContact .catchphrase {
         font-size: 3rem;
+        margin-bottom: 35px;
     }
 
 

@@ -3,63 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CssFiles/style.css">
+    <link rel="stylesheet" href="/CssFiles/bootstrap.css">
+    <link rel="stylesheet" href="/CssFiles/plansiteEtMention.css">
     <title>Portfolio Graphic design Beardwulf Events.</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#"><img src="img/logolouptexte.svg" alt="Logo Beardwulf Events comportant le texte et une tête de loup"></a></li>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Services & compétences</a></li>
-            <li><a href="#">Galerie</a></li>
-            <li><a href="#" class="contactBtn">CONTACT</a></li>
-        </ul>
+    <!--Je possède deux navbar, une pour desktop et une pour mobile.-->
+    <nav id="mobileNavbar">
+        <a href="../index.html"><img src="/img/accueil.svg" alt="icone d'accueil" height="20" width="30"></a>
+        <a href="service.html"><img src="/img/compétences.svg" alt="icone services et compétences" height="20" width="20"></a>
+        <a href="galerie.html"><img src="/img/galerie.svg" alt="icone de la galerie" height="20" width="30"></a>
+        <a href="contact.html"><img src="/img/Contact.svg" alt="icone de contact" height="20" width="30"></a>  
     </nav>
+
+    <nav id="navbarre" class="navbar">
+        <div class="container text-center">
+            <a class="navbar-brand" href="../index.html"><img src="/img/logolouptexte.svg" alt="Logo Beardwulf Events comportant le texte et une tête de loup"></a>
+            <a class="col-2" href="../index.html">Accueil</a>
+            <a class="col-2" href="service.html">Services & compétences</a>
+            <a class="col-2" href="galerie.html">Galerie</a>
+            <div class="contactBtn">
+                <a class="col-2" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="herobanner">
+        <h1 id="textlogo">BEARDWULF <span>EVENTS.</span></h1>
+    </div>
+
+    <!-- Juste un peu d'esthétique dans mes mentions légales.-->
     <div>
-    <h1>BEARDWULF EVENTS.</h1>
+        <h1 class="impacth1">PLAN DU <span>SITE.</span></h1>
+    </div>
+
+<!-- J'utilise une unordered list pour mes liens ainsi qu'une div pour pousser vers la droite 
+ceux qui sont liés à la page services afin de rendre le plan du site légèrement plus visible -->
+    <div class="d-flex justify-content-center">
+        <div class="boxperso">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="/pages/service.html">Services & compétences</a></li>
+                <div class="ps-5">
+                    <li><a href="/pages/gdesigndetail.html">Détail de services & compétences de Graphiste</a></li>
+                    <li><a href="/pages/webdevdetail.html">Détail de services & compétences de développement web</a></li>
+                    <li><a href="/pages/eventdetail.html">Détail de services & compétences en Organisation Evénementielle</a></li> 
+                </div>
+                <li><a href="/pages/galerie.html">Galerie</a></li>
+                <li><a href="/pages/contact.html">Contact & localisation</a></li>
+                <li><a href="/pages/mentionleg.html">Mentions légales</a></li>
+                <li><a href="/pages/plansite.html">Plan du site</a></li>  
+            </ul>
+        </div> 
     </div>
 
 
 <!-- Section du footer -->
+    <div class="separatorlarge"></div>
     <footer id="footer">
-        <div>
+        <div class="footercontainer d-flex justify-content-around">
             <!-- Partie gauche du footer-->
-            <div class="footerLeft">
-                <p>Contact Professionnel :</p>
+            <div class="footerleft mt-4">
                 <div>
-                    <img src="#" alt="logo email">
-                    burdloffkevin@gmail.com
+                    <p><span>Contact Professionnel :</span></p>
+                    <div class=" emailcontact d-flex col align-items-center">
+                        <img class="mt-1" src="/img/whiteContact.svg" alt="logo email" width="20" height="18">
+                        <p>burdloffkevin@gmail.com</p>
+                    </div>
+                    <div>
+                        <p>Mentions légales</p>
+                    </div>
+                    <div>
+                        <p class="mb-4">Plan du site</p>
+                    </div>
+                    <div class="separatorfooter"></div>  
                 </div>
                 <div>
-                    Mentions légales
-                </div>
-                <div>
-                    Plan du site
-                </div>
-                <div>
-                    <img src="img/logoloup.svg" alt="Mascotte loup de la marque Beardwulf Events">
+                    <img class="logo" src="/img/logoloup.svg" alt="Mascotte loup de la marque Beardwulf Events" height="100">
                 </div>
             </div>
+
             <!-- Partie droite du footer-->
-            <div class="footerRight">
-                <p>A propos</p>
-                <div>
+            <div class="footerright md-container">
+                <div class="row">
                     <div>
-                        <a href="#">Accueil</a>
-                    </div>
-                    <div>
-                        <a href="#">Services & compétences</a>
-                    </div>
-                    <div>
-                        <a href="#">Galerie</a>
-                    </div>
-                    <div>
-                        <a href="#">Contact</a>
-                    </div>
+                        <div>
+                            <p>A propos</p>
+                        </div>
+                        <div>
+                            <a href="#">Accueil</a>
+                        </div>
+                        <div>
+                            <a href="#">Services & compétences</a>
+                        </div>
+                        <div>
+                            <a href="#">Galerie</a>
+                        </div>
+                        <div>
+                            <a href="#">Contact</a>
+                        </div>
+                    </div>   
                 </div>
                 <div>
-                    <p>Social Media</p>
+                    <div>
+                        <p>Social Media</p>
+                    </div>
                     <div>
                         <a href="#">Facebook</a>
                     </div>

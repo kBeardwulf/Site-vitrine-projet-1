@@ -1,7 +1,6 @@
 /*  aidé de bootstrap, j'effectue aussi mes propres resets persos
     ainsi que toute modification de style général dont j'ai besoin */
 
-
 @font-face {
     font-family: "robotocondregular";
     src: url(/fonts/Roboto_Condensed-Regular.woff2);
@@ -52,17 +51,21 @@ span { font-weight: bold; }
 
 p { font-family: var(--font-para);
     font-size: 1.4rem; }
-
+    
 a { font-family: var(--font-para);
     font-size: 1.4rem;
+    text-decoration: none;
     transition: color 0.3s ease, opacity 0.3s ease; }
 
 h1 { font-size: 3.4rem; }
 h2 { font-size: 2.4rem; }
 h3 { font-size: 1.8rem; }
 
-/* quelques ajustements pour contrer bootstrap */
-a, ul, li {
+
+/* quelques ajustements pour contrer bootstrap inclus */
+ul, li {
+    font-family: var(--font-para);
+    font-size: 1.2rem;
     text-decoration: none;
     padding-left: 0;
 }
@@ -71,11 +74,27 @@ body {
     background-color: var(--darkgreen);
 }
 
-.separator {
+.separatorfooter {
     border: solid 1px var(--lightgreen);
     width: 25%;
     opacity: 0.5;
     margin-bottom: 50px;
+}
+
+.separator {
+    border: solid 1px var(--lightgreen);
+    width: 15%;
+    opacity: 0.5;
+    margin-bottom: 70px;
+    margin-top: 90px;
+}
+
+.topseparator {
+    border: solid 1px var(--lightgreen);
+    width: 15%;
+    opacity: 0.5;
+    margin-bottom: 50px;
+    margin-top: 25px;
 }
 
 .separatorlarge {
@@ -114,7 +133,7 @@ footer {
 #navbarre a:hover {
     color: #e8f1f2;
 }
- /* Bouton de le navbar */
+
 .contactBtn {
     background-color: var(--leafgreen);
     height: 33px;
@@ -124,11 +143,95 @@ footer {
     padding: 5px
 }
 
-
 #navbarre .contactBtn a {
     font-family: var(--font-para);
     font-size: 16px;
     color: var(--leafboxfontcolor);
+}
+
+
+#textlogo {
+    font-family: var(--font-h2h3);
+    font-size: 7rem;
+    line-height: 1;
+    position: absolute;
+    left: 10px;
+}
+
+/*  Pour créer une bordure sur ma span, j'ai utilisé du text shadow
+    Il y aurait un paramètre "webkit" mais pas compatible sur firefox. */
+#textlogo span {
+    color: var(--darkgreen);
+    text-shadow:
+        -1px  1px 0 var(--lightgreen),  /* Ombre en haut gauche */
+        1px  1px 0 var(--lightgreen),   /* Ombre en haut droite */
+        -1px -1px 0 var(--lightgreen),  /* Ombre en bas gauche */
+        1px -1px 0 var(--lightgreen);   /* Ombre en bas droite */
+ 
+}
+
+.herobanner {
+    background-image: url(/img/LucBKingCon_scene_vide.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 283px;
+}
+
+/* Gestion des boites vertes */
+.greenbox {
+    background-color: var(--leafgreen);
+    border-radius: 1rem;
+}
+
+.greenbox p {
+    padding: 15px;
+    color: var(--leafboxfontcolor);
+}
+
+.greenbox2 p {
+    padding: 15px;
+    color: var(--leafboxfontcolor);
+    border: solid 1px var(--lightgreen);
+    border-radius: 1rem;
+}
+
+.greenbox2 p {
+    padding: 15px;
+    color: var(--lightgreen);
+}
+
+/* Gestion des images */
+.imgsize img {
+    width: 415px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.imgsize2 img {
+    width: 415px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.imgsize3 img {
+    width: 415px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.imgsize4 img {
+    width: 415px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+/************************************/
+/*  CSS du bouton de contact en bas */
+#redirectContact p {
+    margin-top: 55px;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 35px;
 }
 
 /* Bouton de bas de page */
@@ -146,137 +249,11 @@ footer {
     color: var(--leafboxfontcolor);
 }
 
-/*  A retirer bientôt */
-#textlogo {
-    font-family: var(--font-h2h3);
-    font-size: 8rem;
-    line-height: 1;
-    position: absolute;
-    left: 10px;
-}
-
-/*  Pour créer une bordure sur ma span, j'ai utilisé du text shadow
-    Il y aurait un paramètre "webkit" mais pas compatible sur firefox. */
-#textlogo span {
-    color: var(--darkgreen);
-        text-shadow:
-        -1px  1px 0 var(--lightgreen),  /* Ombre en haut a gauche */
-        1px  1px 0 var(--lightgreen),   /* Ombre en haut a droite */
-        -1px -1px 0 var(--lightgreen),  /* Ombre en bas a gauche */
-        1px -1px 0 var(--lightgreen);   /* Ombre en bas a droite */
- 
-}
-
-.herobanner {
-    background-image: url(/img/LucBKingCon_scene_vide.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 283px;
-} 
-
-
-/*  Comme expliqué en html, c'est pour personnaliser
-    le conteneur de mes images.
-    Pour le border radius, j'utilisais 10px, puis j'ai réalisé
-    que je pouvais le rendre responsive en utilisant le rem */
-.creativebox .container {
-    height: 60px;
-    width: 310px;
-    background-color: var(--leafgreen);
-    border-radius: 1rem;
-}
-
-/*  Même traitement pour les logos en catégorie devweb */
-.devbox .container {
-    height: 60px;
-    width: 270px;
-    background-color: var(--darkgreen);
-    border-radius: 1rem;
-    border: solid var(--leafgreen) 1px;
-}
-
-/*  Création d'une box verte pour mon design du texte
-    des compétences Evènementielles */
-.greenbox {
-    height: 270px;
-    width: 350px;
-    background-color: var(--leafgreen);
-    border-radius: 1rem;
-}
-
-.mobileeventimg {
-    height: 220px;
-    width: 365px;
-}
-
-.desktopeventimg {
-    display: none;
-}
-
-.greenbox p {
-    color: var(--leafboxfontcolor);
-}
-
-/*  Boites de "méthodes de travail" */
-.workflowtext {
-    width: 180px;
-    height: 295px;
-    background-color: var(--leafgreen);
-    border-radius: 1rem;
-    text-align: center;
-    margin-top: 10px;
-    
-}
-
-.workflowtext p {
-    color: var(--leafboxfontcolor);
-    padding-top: 50px;
-    font-size: 1.2rem;
-}
-
-.workflowCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.workflowCard h3 {
-    font-family: var(--font-h2h3);
-    font-size: 2rem;
-    text-align: center;
-    width: 100%;
-    height: 38px;
-    border: solid 1px var(--lightgreen);
-    border-radius: 1rem;
-    padding: 6px 15px;
-
-}
-
-.workflowCard img {
-    margin-top: 25px;
-    margin-bottom: -60px;
-    z-index: 1;
-    width: 115px;
-    height: 115px;
-}
-
-
-/* Phrase du bouton contact du bas */
-#redirectContact p {
-    margin-top: 55px;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 35px;
-}
-
-
-/**********************************/
-/*Section footer*/
+/*******************/
+/*  CSS du footer */
 #footer {
     width: 430px;
     height: 370px;
-    font-family: var(--font-para);
 }
 
 #footer a, #footer p {
@@ -318,6 +295,11 @@ footer {
     #navbarre {
         display: none;
     }
+    
+    /* On cache des images pour la version mobile */
+    .desktopShowOnly {
+        display: none;
+    }
 
 }
 
@@ -327,109 +309,32 @@ footer {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     .herobanner {
         height: 835px;
         width: 100%;
     }
 
     #textlogo {
-        font-size: 30rem;
-        top: 190px;
+        font-size: 24rem;
+        top: 250px;
     }
 
     p { font-family: var(--font-para);
         font-size: 1.6rem; }
 
     a { font-family: var(--font-para);
-        font-size: 1.6rem;
-        text-decoration: none; }
+        font-size: 1.6rem; }
 
     h2 { font-size: 2.4rem; }
     h3 { font-size: 2.2rem; }
-
+    
+    /* Conteneur qui limite la place de mes textes */
     .boxperso {
-        width: 900px;
+        max-width: 1100px;
     }
 
-    .devbox .container {
-        height: 60px;
-        width: 270px;
-        background-color: var(--leafgreen);
-        border-radius: 1rem;
-        
-    }
-
-    .greenbox {
-        height: 120px;
-        width: 100%;
-        background-color: var(--darkgreen);
-        border-radius: 1rem;
-        border: solid 1px var(--lightgreen);
-    }
-
-    /* La text box des compétences événementielles */
-        .greenbox p {
-            color: var(--lightgreen);
-            padding: 0 5px;
-        }
-
-    #eventimg img {
-        height: 260px;
-        width: 430px;
-    }
-
-    /* les trois photos evenementielles*/
-    .desktopeventimg {
-        display: flex;
-        height: 230px;
-        width: 370px;
-        border-radius: 1rem;
-
-    }
-
-    /* Il s'agit des boites vertes dans "Méthodes de travail"*/
-    .workflowCard h3 {
-        font-family: var(--font-h2h3);
-        font-size: 3rem;
-        text-align: center;
-        width: 100%;
-        height: 50px;
-        border: solid 1px var(--lightgreen);
-        border-radius: 1rem;
-        padding: 6px 15px;
-
-    }
-
-    .workflowCard img {
-        margin-top: 25px;
-        margin-bottom: -80px;
-        z-index: 1;
-        width: 150px;
-        height: 150px;
-    }
-
-    .workflowtext {
-        width: 270px;
-        height: 350px;
-        background-color: var(--leafgreen);
-        border-radius: 1rem;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .workflowtext p {
-        color: var(--leafboxfontcolor);
-        padding-top: 80px;
-        font-size: 1.6rem;
-    }
-
-    /* Phrase du bouton contact bas de page*/
-    #redirectContact .catchphrase {
-        font-size: 3rem;
-    }
-
-    /* Bouton de bas de page */
+    /*Bouton du bas*/
     .contactBttn {
         background-color: var(--leafgreen);
         height: 60px;
@@ -440,10 +345,49 @@ footer {
         font-size: 3.5rem;
     }
 
+    /*Gestion des boites vertes */
+    .greenbox, .greenbox2 {
+        max-width: 1100px;
+    }
+
+    .h2desktopadjust {
+        max-width: 1220px;
+    }
+
+    /*Gestions des images*/
+    .imgsize img {
+        width: 543px;
+        height: auto;
+    }
+
+    .imgsize2 img {
+        width: 1100px;
+        height: auto;
+        border-radius: 1rem;
+    }
+
+    .imgsize3 img {
+        width: 543px;
+        height: auto;
+        border-radius: 1rem;
+    }
+
+    .imgsize4 img {
+        width: 543px;
+        height: auto;
+        border-radius: 1rem;
+    }
+
+    /* Phrase du bouton du bas */
+    #redirectContact .catchphrase {
+        font-size: 3rem;
+    }
+
+    /*********************/
     /*  Section footer */
     #footer {
-        width: 100%;
-        height: 200px;
+    width: 100%;
+    height: auto;
     }
 
     .footerleft {
@@ -466,4 +410,5 @@ footer {
         width: 400px;
         text-align: center;
     }
+
 }

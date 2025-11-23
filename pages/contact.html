@@ -3,63 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CssFiles/style.css">
+    <link rel="stylesheet" href="/CssFiles/bootstrap.css">
+    <link rel="stylesheet" href="/CssFiles/contact.css">
     <title>Portfolio Graphic design Beardwulf Events.</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#"><img src="img/logolouptexte.svg" alt="Logo Beardwulf Events comportant le texte et une tête de loup"></a></li>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Services & compétences</a></li>
-            <li><a href="#">Galerie</a></li>
-            <li><a href="#" class="contactBtn">CONTACT</a></li>
-        </ul>
+    <!--Je possède deux navbar, une pour desktop et une pour mobile.-->
+    <nav id="mobileNavbar">
+        <a href="../index.html"><img src="/img/accueil.svg" alt="icone d'accueil" height="20" width="30"></a>
+        <a href="service.html"><img src="/img/compétences.svg" alt="icone services et compétences" height="20" width="20"></a>
+        <a href="galerie.html"><img src="/img/galerie.svg" alt="icone de la galerie" height="20" width="30"></a>
+        <a href="contact.html"><img src="/img/Contact.svg" alt="icone de contact" height="20" width="30"></a>  
     </nav>
-    <div>
-    <h1>BEARDWULF EVENTS.</h1>
+
+    <nav id="navbarre" class="navbar">
+        <div class="container text-center">
+            <a class="navbar-brand" href="../index.html"><img src="/img/logolouptexte.svg" alt="Logo Beardwulf Events comportant le texte et une tête de loup"></a>
+            <a class="col-2" href="../index.html">Accueil</a>
+            <a class="col-2" href="service.html">Services & compétences</a>
+            <a class="col-2" href="galerie.html">Galerie</a>
+            <div class="contactBtn">
+                <a class="col-2" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!--Via une media query, je demande à l'une ou l'autre de ne pas s'afficher
+        en fonction de la taille d'écran-->
+
+<!--******************************************************************************
+*******************************************************************************-->
+
+
+    <!--Ici commence le site de manière générale par la banner hero-->
+    <div class="herobanner">
+        <h1 id="textlogo">GRAPHIC <span>DESIGN.</span></h1>
     </div>
+    <div class=" mt-5 d-flex justify-content-center">
+        <div class="mt-5 ms-4 px-3 mb-5 boxperso">
+            <p>
+                Basé sur Colmar, je peux me déplacer aisément dans toute l’Alsace et environs. 
+                Nous pouvons organiser un rendez-vous en personne, ou alors, à votre convenance, 
+                passer par une plateforme tel que Microsoft Teams ou Discord. Enfin, vous pouvez 
+                aussi m’envoyer un mail si vous souhaitez simplement des renseignements.
+            </p>
+        </div>
+    </div>
+
+    <div class="container topseparator"></div>
+
+    <!-- Je crée une div qui sera en flex pour le desktop-->
+
+    <!--Tant que j'ai pas de serveur, je met en methode get. évidemment pour des raisons
+    de sécurité, cela doit être en methode post quand on traite des informations sensible -->
+    <div class="desktopflex">
+        <div class="px-3 widthAdjuster">
+            <div class="importantp px-3">
+                <p>
+                    Temps de réponse actuel : 1 à 2 jours.
+                </p>
+            </div>
+            <form method="get">
+                <div><label for="name">Nom *</label></div>
+                <div><input type="text" id="name" placeholder="Estinien Varlineau"></div>
+
+                <div><label for="mail">Adresse mail *</label></div>
+                <div><input type="text" id="email" placeholder="alphi.leveilleur@email.com"></div>
+
+                <div><label for="phoneNb">Téléphone *</label></div>                           <!-- On m'a conseillé de récupérer le numéro de téléphone en input text!-->
+                <div><input type="text" id="phoneNb" placeholder="01.23.45.67.89"></div>    <!-- Je sais plus pourquoi. C'était le formateur JS :D-->
+                
+                <div><label for="whySelect">Pourquoi me contactez-vous ?</label></div>
+                <div><select name="whySelect" id="whySelect">
+                        <option value="graphCreation">Création visuelle (Charte graphique, identité...)</option>
+                        <option value="sitewebCreation">Création de site web (Personnel, commercial...)</option>
+                        <option value="eventOrganization">Création, Organisation ou aide Evénementielle</option>
+                        <option value="questions">J'ai une question (Renseignements, devis...)</option>
+                    </select></div>
+                
+                <div><label for="textArea">Votre message *</label></div>
+                <div class="px-1"><textarea name="usrMsg" id="usrMsg" placeholder="Ecrivez votre message ici"></textarea></div>
+            </form>
+        </div>
+
+        <div class=" hideseparator container separator"></div>
+
+        <section>
+            <div class="px-3 container importantp">
+                <p>Google Map</p>
+            </div>
+            <div class="d-flex justify-content-center gmap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42635.86704491114!2d7.291770199613398!3d48.09592648389515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479165fb30b15b99%3A0x9bfe7b716880d65b!2sCCI%20Campus%20Alsace%20-%20Colmar!5e0!3m2!1sfr!2sfr!4v1763916338551!5m2!1sfr!2sfr" 
+                width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </div>
+    
 
 
 <!-- Section du footer -->
+    <div class="separatorlarge"></div>
     <footer id="footer">
-        <div>
+        <div class="footercontainer d-flex justify-content-around">
             <!-- Partie gauche du footer-->
-            <div class="footerLeft">
-                <p>Contact Professionnel :</p>
+            <div class="footerleft mt-4">
                 <div>
-                    <img src="#" alt="logo email">
-                    burdloffkevin@gmail.com
+                    <p><span>Contact Professionnel :</span></p>
+                    <div class=" emailcontact d-flex col align-items-center">
+                        <img class="mt-1" src="/img/whiteContact.svg" alt="logo email" width="20" height="18">
+                        <p>burdloffkevin@gmail.com</p>
+                    </div>
+                    <div>
+                        <p>Mentions légales</p>
+                    </div>
+                    <div>
+                        <p class="mb-4">Plan du site</p>
+                    </div>
+                    <div class="separatorfooter"></div>  
                 </div>
                 <div>
-                    Mentions légales
-                </div>
-                <div>
-                    Plan du site
-                </div>
-                <div>
-                    <img src="img/logoloup.svg" alt="Mascotte loup de la marque Beardwulf Events">
+                    <img class="logo" src="/img/logoloup.svg" alt="Mascotte loup de la marque Beardwulf Events" height="100">
                 </div>
             </div>
+
             <!-- Partie droite du footer-->
-            <div class="footerRight">
-                <p>A propos</p>
-                <div>
+            <div class="footerright md-container">
+                <div class="row">
                     <div>
-                        <a href="#">Accueil</a>
-                    </div>
-                    <div>
-                        <a href="#">Services & compétences</a>
-                    </div>
-                    <div>
-                        <a href="#">Galerie</a>
-                    </div>
-                    <div>
-                        <a href="#">Contact</a>
-                    </div>
+                        <div>
+                            <p>A propos</p>
+                        </div>
+                        <div>
+                            <a href="#">Accueil</a>
+                        </div>
+                        <div>
+                            <a href="#">Services & compétences</a>
+                        </div>
+                        <div>
+                            <a href="#">Galerie</a>
+                        </div>
+                        <div>
+                            <a href="#">Contact</a>
+                        </div>
+                    </div>   
                 </div>
                 <div>
-                    <p>Social Media</p>
+                    <div>
+                        <p>Social Media</p>
+                    </div>
                     <div>
                         <a href="#">Facebook</a>
                     </div>
