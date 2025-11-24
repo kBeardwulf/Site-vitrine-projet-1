@@ -125,6 +125,7 @@ footer {
     color: #e8f1f2;
 }
 
+/* Bouton de la navbar*/
 .contactBtn {
     background-color: var(--leafgreen);
     height: 33px;
@@ -145,6 +146,25 @@ footer {
     color: var(--leafboxfontcolor);
 }
 
+/* Bouton de bas de page */
+.contactBttn {
+    background-color: var(--leafgreen);
+    height: 38px;
+    width: 160px;
+    font-weight: 600;
+    border-radius: 1rem;
+    padding: 5px;
+    transition: background-color 0.3s ease; 
+}
+
+.contactBttn:hover {
+    background-color: var(--lightgreen);
+}
+
+.contactBttn a {
+    font-size: 2rem;
+    color: var(--leafboxfontcolor);
+}
 
 #textlogo {
     font-family: var(--font-h2h3);
@@ -237,18 +257,44 @@ footer {
     width: 160px;
     font-weight: 600;
     border-radius: 1rem;
-    padding: 5px;
-    transition: background-color 0.3s ease; 
+    padding: 5px
 }
-
-.contactBttn:hover {
-    background-color: var(--lightgreen);
-}
-
 
 .contactBttn a {
     font-size: 2rem;
     color: var(--leafboxfontcolor);
+}
+
+#carouselExampleIndicators {
+    max-width: 400px;
+}
+
+#carouselExampleIndicators img {
+    border-radius: 1rem;
+    margin-bottom: 50px;
+}
+
+.h2Impact {
+    font-family: var(--font-h2h3);
+    font-size: 5.5rem;
+    margin-bottom: -2px;
+}
+
+.h2Impact span {
+    color: var(--darkgreen);
+    text-shadow:
+        -1px  1px 0 var(--lightgreen),  /* Ombre en haut gauche */
+        1px  1px 0 var(--lightgreen),   /* Ombre en haut droite */
+        -1px -1px 0 var(--lightgreen),  /* Ombre en bas gauche */
+        1px -1px 0 var(--lightgreen);   /* Ombre en bas droite */
+}
+
+/*  Je cible mon attribut "data-bs-target afin de personnaliser 
+    les "traits" de bootstrap en petit ronds! */ 
+.carousel-indicators [data-bs-target] {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
 }
 
 /*******************/
@@ -347,42 +393,24 @@ footer {
         font-size: 3.5rem;
     }
 
-    /*Gestion des boites vertes */
-    .greenbox, .greenbox2 {
-        max-width: 1100px;
+    #carouselExampleIndicators {
+        max-width: 700px;
     }
 
-    .h2desktopadjust {
-        max-width: 1220px;
+    .h2Impact {
+    font-size: 9.4rem;
     }
 
-    /*Gestions des images*/
-    .imgsize img {
-        width: 543px;
-        height: auto;
-    }
-
-    .imgsize2 img {
-        width: 1100px;
-        height: auto;
-        border-radius: 1rem;
-    }
-
-    .imgsize3 img {
-        width: 543px;
-        height: auto;
-        border-radius: 1rem;
-    }
-
-    .imgsize4 img {
-        width: 543px;
-        height: auto;
-        border-radius: 1rem;
-    }
-
-    /* Phrase du bouton du bas */
+    /* Phrase du bouton contact bas de page*/
     #redirectContact .catchphrase {
         font-size: 3rem;
+    }
+
+    /* Bouton de bas de page */
+    .contactBttn {
+        background-color: var(--leafgreen);
+        height: 60px;
+        width: 280px;
     }
 
     /*********************/

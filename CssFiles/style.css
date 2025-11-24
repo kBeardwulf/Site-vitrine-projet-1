@@ -8,16 +8,6 @@
 }
 
 @font-face {
-    font-family: "robotocondbold";
-    src: url(/fonts/Roboto_Condensed-Bold.woff2);
-}
-
-@font-face {
-    font-family: "robotocondsemibold";
-    src: url(/fonts/Roboto_Condensed-SemiBold.woff2);
-}
-
-@font-face {
     font-family: "Impact";
     src: url(/fonts/impact.woff2);
 }
@@ -60,6 +50,8 @@ a { font-family: var(--font-para);
 h1 { font-size: 3.4rem; }
 h2 { font-size: 2.4rem; }
 h3 { font-size: 1.8rem; }
+
+h1, h2, h3 { font-family: var(--font-para); }
 
 /* quelques ajustements pour contrer bootstrap */
 a, ul, li {
@@ -121,14 +113,18 @@ footer {
     width: 90px;
     font-weight: 600;
     border-radius: 1rem;
-    padding: 5px
+    padding: 5px;
+    transition: background-color 0.3s ease; 
 }
-
 
 #navbarre .contactBtn a {
     font-family: var(--font-para);
     font-size: 16px;
     color: var(--leafboxfontcolor);
+}
+
+.contactBtn:hover {
+    background-color: var(--lightgreen);
 }
 
 /* Bouton de bas de page */
@@ -138,7 +134,12 @@ footer {
     width: 160px;
     font-weight: 600;
     border-radius: 1rem;
-    padding: 5px
+    padding: 5px;
+    transition: background-color 0.3s ease; 
+}
+
+.contactBttn:hover {
+    background-color: var(--lightgreen);
 }
 
 .contactBttn a {
@@ -349,7 +350,7 @@ footer {
     h3 { font-size: 2.2rem; }
 
     .boxperso {
-        width: 900px;
+        width: 1000px;
     }
 
     .devbox .container {
