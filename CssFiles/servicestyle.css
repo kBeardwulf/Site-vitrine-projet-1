@@ -181,31 +181,9 @@ footer {
     margin-top: 70px;
 }
 
-#textlogo {
-    font-family: var(--font-h2h3);
-    font-size: 7rem;
-    line-height: 1;
-    position: absolute;
-    left: 10px;
-}
-
-/*  Pour créer une bordure sur ma span, j'ai utilisé du text shadow
-    Il y aurait un paramètre "webkit" mais pas compatible sur firefox. */
-#textlogo span {
-    color: var(--darkgreen);
-        text-shadow:
-        -1px  1px 0 var(--lightgreen),  /* Ombre en haut gauche */
-        1px  1px 0 var(--lightgreen),   /* Ombre en haut droite */
-        -1px -1px 0 var(--lightgreen),  /* Ombre en bas gauche */
-        1px -1px 0 var(--lightgreen);   /* Ombre en bas droite */
- 
-}
-
-.herobanner {
-    background-image: url(/img/LucBKingCon_scene_vide.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 283px;
+.herobanner img {
+    width: 430px;
+    height: auto;
 } 
 
 /*  Je crée mes designs de H3 pour "Graphic Design" "Web dev." et "Event org." */
@@ -463,11 +441,54 @@ footer {
     }
 }
 
-@media (min-width: 1200px) {
-    .herobanner {
-        height: 835px;
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* Responsive des éléments en tablette et petit écran portable */
+    .herobanner img {
+        width: 100%;
+        height: auto;
+    }
+
+    #footer {
         width: 100%;
     }
+
+    .eventcard {
+        height: 400px;
+    }
+
+    .greencard {
+        margin-left: 48%;
+    }
+
+    .greencard2 {
+        margin-left:17%;
+    }
+
+    .leftVerticalSeparator {
+        margin-left: 14%;
+    }
+
+    .h3GraphAndEvent {
+        margin-right: 13%;
+    }
+
+    .h3WebDev {
+        margin-left: 13%;
+    }
+} 
+
+@media (min-width: 1400px) {
+
+    .herobanner img {
+
+        width: 100%;
+        max-width: 1440px;
+        height: auto;
+    }
+
+
+
 
     #textlogo {
         font-size: 24rem;
@@ -660,7 +681,7 @@ footer {
     /*  Section footer */
     #footer {
     width: 100%;
-    height: 200px;
+    height: auto;
     }
 
     .footerleft {

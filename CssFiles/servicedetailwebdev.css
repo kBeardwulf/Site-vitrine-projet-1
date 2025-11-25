@@ -167,13 +167,7 @@ footer {
     background-color: var(--lightgreen);
 }
 
-#textlogo {
-    font-family: var(--font-h2h3);
-    font-size: 6rem;
-    line-height: 1;
-    position: absolute;
-    left: 10px;
-}
+
 
 /*  Pour créer une bordure sur ma span, j'ai utilisé du text shadow
     Il y aurait un paramètre "webkit" mais pas compatible sur firefox. */
@@ -187,12 +181,10 @@ footer {
  
 }
 
-.herobanner {
-    background-image: url(/img/LucBKingCon_scene_vide.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 283px;
-}
+.herobanner img {
+    width: 430px;
+    height: auto;
+} 
 
 /* Ajustements des titres spécifique à cette page*/
 .h2desktopadjust2 {
@@ -333,15 +325,32 @@ footer {
     }
 }
 
-@media (min-width: 1200px) {
-    .herobanner {
-        height: 835px;
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* Gestion responsives des images en taille tablette et petit pc portable*/
+    .herobanner img {
+        width: 100%;
+        height: auto;
+    }
+
+    #footer {
         width: 100%;
     }
 
-    #textlogo {
-        font-size: 24rem;
-        top: 250px;
+    .imgsize img, .imgsize2 img, .imgsize3 img, .lastprojectimg img {
+        width: 100%;
+        height: auto;
+        
+    }
+
+} 
+
+@media (min-width: 1400px) {
+
+    .herobanner img {
+        width: 100%;
+        max-width: 1440px;
+        height: auto;
     }
 
     p { font-family: var(--font-para);
@@ -415,7 +424,7 @@ footer {
     /*  Section footer */
     #footer {
     width: 100%;
-    height: 200px;
+    height: auto;
     }
 
     .footerleft {

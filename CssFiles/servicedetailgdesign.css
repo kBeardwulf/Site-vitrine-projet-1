@@ -168,33 +168,10 @@ footer {
     color: var(--leafboxfontcolor);
 }
 
-
-#textlogo {
-    font-family: var(--font-h2h3);
-    font-size: 7rem;
-    line-height: 1;
-    position: absolute;
-    left: 10px;
-}
-
-/*  Pour créer une bordure sur ma span, j'ai utilisé du text shadow
-    Il y aurait un paramètre "webkit" mais pas compatible sur firefox. */
-#textlogo span {
-    color: var(--darkgreen);
-        text-shadow:
-        -1px  1px 0 var(--lightgreen),  /* Ombre en haut gauche */
-        1px  1px 0 var(--lightgreen),   /* Ombre en haut droite */
-        -1px -1px 0 var(--lightgreen),  /* Ombre en bas gauche */
-        1px -1px 0 var(--lightgreen);   /* Ombre en bas droite */
- 
-}
-
-.herobanner {
-    background-image: url(/img/LucBKingCon_scene_vide.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 283px;
-}
+.herobanner img {
+    width: 430px;
+    height: auto;
+} 
 
 /* Gestion des boites vertes*/
 .greenbox {
@@ -339,15 +316,52 @@ footer {
     }
 }
 
-@media (min-width: 1200px) {
-    .herobanner {
-        height: 835px;
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* Responsive des images en tablette / petit écran portable */
+    .herobanner img {
+        width: 100%;
+        height: auto;
+    }
+
+    #footer {
         width: 100%;
     }
 
-    #textlogo {
-        font-size: 24rem;
-        top: 250px;
+    .imgsize img {
+        width: 225px;
+        height: auto;
+    }
+
+    .imgsize2 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .bannerimg img, .bannerimg2 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .imgsize3 img {
+        height: 260px;
+        width: auto;
+    }
+
+    .imgsize4 img {
+        height: 345px;
+        width: auto;
+    }
+
+} 
+
+@media (min-width: 1400px) {
+
+    .herobanner img {
+
+        width: 100%;
+        max-width: 1440px;
+        height: auto;
     }
 
     p { font-family: var(--font-para);
@@ -433,7 +447,7 @@ footer {
     /*  Section footer */
     #footer {
     width: 100%;
-    height: 200px;
+    height: auto;
     }
 
     .footerleft {

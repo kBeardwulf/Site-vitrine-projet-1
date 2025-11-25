@@ -147,32 +147,9 @@ footer {
     color: var(--leafboxfontcolor);
 }
 
-/*  A retirer bientôt */
-#textlogo {
-    font-family: var(--font-h2h3);
-    font-size: 8rem;
-    line-height: 1;
-    position: absolute;
-    left: 10px;
-}
-
-/*  Pour créer une bordure sur ma span, j'ai utilisé du text shadow
-    Il y aurait un paramètre "webkit" mais pas compatible sur firefox. */
-#textlogo span {
-    color: var(--darkgreen);
-        text-shadow:
-        -1px  1px 0 var(--lightgreen),  /* Ombre en haut a gauche */
-        1px  1px 0 var(--lightgreen),   /* Ombre en haut a droite */
-        -1px -1px 0 var(--lightgreen),  /* Ombre en bas a gauche */
-        1px -1px 0 var(--lightgreen);   /* Ombre en bas a droite */
- 
-}
-
-.herobanner {
-    background-image: url(/img/HeroBannerIndex.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 283px;
+.herobanner img {
+    width: 430px;
+    height: auto;
 } 
 
 
@@ -328,16 +305,32 @@ footer {
     }
 }
 
-@media (min-width: 1024px) {
-    .herobanner {
-        width: ;
-        height: 800px;
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* Responsive de certains éléments en tablette et écran petit portable */
+    .herobanner img {
+        width: 100%;
+        height: auto;
+    }
+
+    #footer {
         width: 100%;
     }
 
-    #textlogo {
-        font-size: 30rem;
-        top: 190px;
+    .workflowCard {
+        flex-basis: calc(50% - 10px);
+    }
+}
+
+    
+
+@media (min-width: 1400px) {
+
+    .herobanner img {
+
+        width: 100%;
+        max-width: 1440px;
+        height: auto;
     }
 
     p { font-family: var(--font-para);
@@ -445,7 +438,7 @@ footer {
     /*  Section footer */
     #footer {
         width: 100%;
-        height: 200px;
+        height: auto;
     }
 
     .footerleft {
