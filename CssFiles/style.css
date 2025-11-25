@@ -169,7 +169,7 @@ footer {
 }
 
 .herobanner {
-    background-image: url(/img/LucBKingCon_scene_vide.jpg);
+    background-image: url(/img/HeroBannerIndex.jpg);
     background-size: cover;
     background-position: center;
     height: 283px;
@@ -330,7 +330,8 @@ footer {
 
 @media (min-width: 1024px) {
     .herobanner {
-        height: 835px;
+        width: ;
+        height: 800px;
         width: 100%;
     }
 
