@@ -348,6 +348,32 @@ footer {
         height: auto;
     }
 
+    /* Boutons pour naviguer entre les pages détails*/
+
+    .detailNavBtn, .detailNavBtn2 {
+        padding-top: 5px;
+        height: 40px;
+        border-radius: 1rem;
+    }
+
+    .detailNavBtn {
+        margin-top: 75px;
+        width: 325px;
+        background-color: var(--leafgreen);
+    }
+
+    .detailNavBtn2 {
+        margin-top: 75px;
+        width: 305px;
+        background-color: var(--leafgreen);
+    }
+
+    .detailNav a {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--leafboxfontcolor);
+    }
+
 } 
 
 @media (min-width: 1400px) {
@@ -421,7 +447,6 @@ footer {
 
     .detailNavBtn, .detailNavBtn2 {
         padding-top: 5px;
-        padding-left: 10px;
         height: 40px;
         border-radius: 1rem;
     }
@@ -434,7 +459,7 @@ footer {
 
     .detailNavBtn2 {
         margin-top: 75px;
-        width: 365px;
+        width: 305px;
         background-color: var(--leafgreen);
     }
 

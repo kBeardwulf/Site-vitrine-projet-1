@@ -463,20 +463,19 @@ footer {
 
     .detailNavBtn, .detailNavBtn2 {
         padding-top: 5px;
-        padding-left: 10px;
         height: 40px;
         border-radius: 1rem;
     }
 
     .detailNavBtn {
         margin-top: 75px;
-        width: 325px;
+        width: 315px;
         background-color: var(--leafgreen);
     }
 
     .detailNavBtn2 {
         margin-top: 75px;
-        width: 365px;
+        width: 305px;
         background-color: var(--leafgreen);
     }
 
