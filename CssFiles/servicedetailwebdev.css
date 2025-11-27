@@ -265,6 +265,33 @@ footer {
     color: var(--leafboxfontcolor);
 }
 
+/* Boutons pour naviguer entre les pages détails*/
+
+.detailNavBtn, .detailNavBtn2 {
+    padding-top: 5px;
+    height: 60px;
+    border-radius: 1rem;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.detailNavBtn {
+    width: 150px;
+    background-color: var(--leafgreen);
+}
+
+.detailNavBtn2 {
+    width: 150px;
+    background-color: var(--leafgreen);
+}
+
+.detailNav a {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--leafboxfontcolor);
+    text-align: center;
+}
+
 /*******************/
 /*  CSS du footer */
 #footer {
@@ -418,6 +445,33 @@ footer {
 
     #redirectContact .catchphrase {
         font-size: 3rem;
+    }
+
+    /* Boutons pour naviguer entre les pages détails*/
+
+    .detailNavBtn, .detailNavBtn2 {
+        padding-top: 5px;
+        padding-left: 10px;
+        height: 40px;
+        border-radius: 1rem;
+    }
+
+    .detailNavBtn {
+        margin-top: 75px;
+        width: 325px;
+        background-color: var(--leafgreen);
+    }
+
+    .detailNavBtn2 {
+        margin-top: 75px;
+        width: 365px;
+        background-color: var(--leafgreen);
+    }
+
+    .detailNav a {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--leafboxfontcolor);
     }
 
     /*********************/
