@@ -43,7 +43,8 @@ p { font-family: var(--font-para);
     
 a { font-family: var(--font-para);
     font-size: 1.4rem;
-    transition: color 0.3s ease, opacity 0.3s ease; }
+    transition: color 0.3s ease, opacity 0.3s ease;
+    text-decoration: none; }
 
 h1 { font-size: 3.4rem; }
 h2 { font-size: 2.4rem; }
@@ -214,9 +215,9 @@ footer {
 }
 
 /*  J'ajuste le texte parce que figma m'a trahi */
-#liGreenLeaf p {
-    font-size: 1.2rem;
+#liGreenLeaf p, #liGreenLeaf2 p {
     color: var(--leafboxfontcolor);
+    font-size: 1.2rem;
     margin-top: 10px;
     padding: 0 5px;
 }
@@ -358,7 +359,7 @@ footer {
     border-radius: 1rem;
 }
 
-#eventtitle p {
+.eventtitle p, #eventtitle2 p{
     font-size: 1.4rem;
 }
 
@@ -588,7 +589,7 @@ footer {
         height: 222px;
     }
 
-    #liGreenLeaf p, #liGreenLeaf li, #liDarkGreen p, #liDarkGreen li {
+    #liGreenLeaf p, #liGreenLeaf2 p, #liGreenLeaf li, #liDarkGreen p, #liDarkGreen li {
         font-size: 1.6rem;
     }
 
