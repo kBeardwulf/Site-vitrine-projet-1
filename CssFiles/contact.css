@@ -158,6 +158,7 @@ footer {
 /*  Un h2 ne me semblait pas forcément utile, alors
     j'ai créer un classe pour un paragraphe plus important*/
 .importantp p {
+    margin-left: 3%;
     font-size: 1.8rem;
     font-weight: bold;
 }
@@ -297,6 +298,10 @@ input, select {
         width: calc(100% - 5px);
     }
 
+    .importantp {
+        margin-left: -1%;
+    }
+
 } 
 
 @media (min-width: 1400px) {
@@ -318,6 +323,9 @@ input, select {
     h2 { font-size: 2.4rem; }
     h3 { font-size: 2.2rem; }
 
+    .importantp {
+        margin-left: -3%;
+    }
 
     /* J'ai ma flexbox ici pour la version desktop*/
     .desktopflex {

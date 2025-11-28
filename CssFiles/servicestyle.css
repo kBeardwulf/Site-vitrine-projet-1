@@ -11,13 +11,13 @@
     src: url(/fonts/impact.woff2);
 }
 
-
 * {
     color: var(--lightgreen);
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
 /*  pour me faciliter la vie et les changements futurs
     je me suis fait mes propres variables.*/
 :root {
@@ -66,6 +66,7 @@ body {
     background-color: var(--darkgreen);
 }
 
+/* Je crée les différents separators dont j'ai besoin*/
 .separator {
     border: solid 1px var(--lightgreen);
     width: 25%;
@@ -106,6 +107,7 @@ body {
     opacity: 70%;
 }
 
+/* J'ajuste la couleur du footer */ 
 footer {
     background-color: var(--footercolor);
 }
@@ -118,10 +120,12 @@ footer {
     width: 100%;
     height: 50px;
     background-color: var(--leafgreen);
+
     /*  Au départ, mes SVGs étaient hors de ma ligne verte.
         align-items & justify-content les ont remise à l'intérieur de la boite*/
     align-items: center;
     justify-content: space-around;
+
     /*  Ici je fixe la barre mobile en bas de mon écran*/
     position: fixed;
     bottom: 0;
@@ -178,10 +182,6 @@ footer {
     text-decoration: none;
 }
 
-.topadjust {
-    margin-top: 70px;
-}
-
 .herobanner img {
     width: 430px;
     height: auto;
@@ -230,9 +230,10 @@ footer {
     margin-left: 40px;
 }
 
-/*  Je design mon bouton pour les pages détaillés */
+/*  Je design mon premier bouton pour les pages détaillés */
 .BtnKnowMore {
-    margin-left: 70px;
+    margin-top: 40px;
+    margin-left: 75px;
     padding-top: 5px;
     padding-left: 8px;
     width: 100px;
@@ -266,6 +267,7 @@ footer {
     margin-top: -47px;
 }
 
+/* Personnalisation de mes titres H3*/
 .h3WebDev span {
     color: var(--darkgreen);
     text-shadow:
@@ -275,7 +277,7 @@ footer {
         1px -1px 0 var(--lightgreen);   /* Ombre en bas droite */
 }
 
-/*  Version 2 des cards*/
+/*  Version 2 des cards, celle au background color vert sombre*/
 .greencard2 {
     background-color: var(--darkgreen);
     border: solid 1px var(--lightgreen);
@@ -303,9 +305,11 @@ footer {
     margin-left: 50px;
 }
 
+
+/* Je configure mon second bouton */
 .BtnKnowMore2 {
-    margin-top: 35px;
-    margin-left: 75px;
+    margin-top: 70px;
+    margin-left: 80px;
     padding-top: 5px;
     padding-left: 8px;
     width: 100px;
@@ -332,6 +336,7 @@ footer {
      margin-bottom: -35px;
 }
 
+/* Celui-ci ajuste mon troisieme bouton "en savoir plus" */
 .adjustBtn3 {
     margin-top: 22px;
     margin-left: 75px;
@@ -359,6 +364,7 @@ footer {
     border-radius: 1rem;
 }
 
+/* Gestion des "titres" d'event*/
 .eventtitle p, #eventtitle2 p{
     font-size: 1.4rem;
 }
@@ -368,11 +374,11 @@ footer {
     color: var(--leafboxfontcolor);
 }
 
+/* Gestion des images du "Ils me font confiance" */
 .partnerimg1, .partnerimg3 {
     height: 102px;
     width: 102px;
 }
-
 
 .partnerimg2 {
     width: 128px;

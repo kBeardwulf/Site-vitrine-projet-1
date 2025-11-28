@@ -364,10 +364,20 @@ footer {
         width: 100%;
     }
 
-    .imgsize img, .imgsize2 img, .imgsize3 img, .lastprojectimg img {
+    .imgsize img, .imgsize2 img, .imgsize3 img {
         width: 100%;
         height: auto;
-        
+    }
+
+    .lastprojectimg img {
+        width: 96%;
+        height: auto;
+        margin-left: 2%;
+    }
+
+    .h2desktopadjust2 {
+        margin-bottom: -10px;
+        margin-right: -12px;
     }
 
 } 
