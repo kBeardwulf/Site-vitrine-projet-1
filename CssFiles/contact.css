@@ -170,6 +170,7 @@ footer {
 
 label, input, select, #usrMsg, #whySelect {
     font-family: var(--font-para);
+    color: var(--leafboxfontcolor);
 }
 
 label {
