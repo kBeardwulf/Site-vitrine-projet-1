@@ -641,6 +641,12 @@ footer {
         margin-top: 155px;
     }
 
+    /* Celui-ci ajuste mon troisieme bouton "en savoir plus" */
+    .adjustBtn3 {
+        margin-top: 132px;
+        margin-left: 180px;
+    }
+
     /****************************************************/
     /* Création et ajustements des cartes derniers events */
 
